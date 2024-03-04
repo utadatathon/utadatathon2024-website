@@ -58,7 +58,7 @@ export default function AuthPage() {
           .then(() => {
             router.push('/auth');
             alert(
-              'Account created! Check your email/spam folder to verify your account and log in.',
+              'Account created! Check your email/spam folder to verify your account and Log in.',
             );
           });
       })
@@ -91,7 +91,7 @@ export default function AuthPage() {
         .currentUser.sendEmailVerification()
         .then(() => {
           router.push('/auth');
-          alert('Verification email sent, check your email to verify your account and log in');
+          alert('Verification email sent! Check your email to verify your account and log in');
         });
     } catch (error) {
       alert(
@@ -119,7 +119,7 @@ export default function AuthPage() {
           <Link href="/" passHref>
             <div className="cursor-pointer items-center inline-flex text-primaryDark font-medium">
               <ChevronLeftIcon />
-              return to event site
+              Return to Event Site
             </div>
           </Link>
         </div>
@@ -135,7 +135,7 @@ export default function AuthPage() {
                     {signInOption ? 'Sign in' : 'Create an account'}
                   </h1>
                   <div className="text-center text-complementary/60 mt-4 mb-12">
-                    {signInOption ? ' New to HackPortal?' : 'Already have an account?'}{' '}
+                    {signInOption ? ' New to UTA Datathon?' : 'Already have an account?'}{' '}
                     <span
                       onClick={() =>
                         signInOption ? setSignInOption(false) : setSignInOption(true)
@@ -254,7 +254,7 @@ export default function AuthPage() {
                         setErrorMsg('');
                       }}
                     >
-                      Send reset link
+                      Send Reset Link
                     </button>
                   </div>
                   {/* Error and verification messages */}
