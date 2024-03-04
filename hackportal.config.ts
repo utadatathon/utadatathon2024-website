@@ -214,7 +214,7 @@ export const hackPortalConfig: HackPortalConfig = {
         numberInputQuestions: [
           {
             //Hackathons attended question
-            question: 'How many hackathons have you attended before?',
+            question: 'How many Datathons have you attended before?',
             required: true,
             id: 'hackathonExperience',
             name: 'hackathonExperience',
@@ -229,7 +229,7 @@ export const hackPortalConfig: HackPortalConfig = {
         dropdownQuestions: [
           {
             //Experience question
-            question: 'Relative software-building experience:',
+            question: 'Relative Experience with Datasets:',
             required: true,
             id: 'softwareExperience',
             name: 'softwareExperience',
@@ -255,7 +255,7 @@ export const hackPortalConfig: HackPortalConfig = {
           },
           {
             //Heard from question
-            question: 'Where did you hear about HackPortal?',
+            question: 'Where did you hear about UTA Datathon?',
             required: true,
             id: 'heardFrom',
             name: 'heardFrom',
@@ -337,6 +337,10 @@ export const hackPortalConfig: HackPortalConfig = {
                 value: 'Vegetarian',
               },
               {
+                title: 'Halal',
+                value: 'Halal',
+              },
+              {
                 title: 'Nuts',
                 value: 'Nuts',
               },
@@ -364,7 +368,7 @@ export const hackPortalConfig: HackPortalConfig = {
         textAreaQuestions: [
           {
             //Accomodations question
-            question: 'Anything else we can do to better accommodate you at our hackathon?',
+            question: 'Anything else we can do to better accommodate you at our Datathon? If you have any specific accommodations requests, please email us at datathon@uta.edu.',
             id: 'accomodations',
             name: 'accomodations',
             required: false,

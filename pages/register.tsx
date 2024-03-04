@@ -120,7 +120,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
   if (!allowedRegistrations) {
     return (
       <h1 className="mx-auto text-2xl mt-4 font-bold">
-        Registrations is closed and no longer allowed
+        Registrations is closed and no longer allowed.
       </h1>
     );
   }
@@ -186,14 +186,14 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
     <div className="flex flex-col flex-grow bg-secondary">
       <Head>
         <title>Hacker Registration</title>
-        <meta name="description" content="Register for [HACKATHON NAME]" />
+        <meta name="description" content="Register for UTA Datathon 2024" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="pt-4 pl-4">
         <Link href="/" passHref>
           <div className="cursor-pointer items-center inline-flex text-primaryDark font-semibold sm:text-lg">
             <ChevronLeftIcon />
-            return to event site
+            Return to Event Site
           </div>
         </Link>
       </section>
@@ -201,7 +201,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
         id="jumbotron"
         className="text-primaryDark lg:text-4xl sm:text-3xl text-2xl font-bold text-center lg:mt-0 mt-6 mb-6"
       >
-        HackPortal Hacker Registration
+        UTA Datathon 2024 Registration
       </section>
 
       <section className="relative">
@@ -299,7 +299,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
               {/* School Questions */}
               {registrationSection == 1 && (
                 <section className="bg-white lg:w-3/5 md:w-3/4 w-full min-h-[35rem] mx-auto rounded-2xl md:py-10 py-6 px-8 mb-8 text-[#4C4950]">
-                  <h2 className="sm:text-2xl text-xl font-semibold sm:mb-3 mb-1">School Info</h2>
+                  <h2 className="sm:text-2xl text-xl font-semibold sm:mb-3 mb-1">School Information</h2>
                   <div className="flex flex-col">
                     {schoolQuestions.map((obj, idx) => (
                       <DisplayQuestion
@@ -317,7 +317,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
               {registrationSection == 2 && (
                 <section className="bg-white lg:w-3/5 md:w-3/4 w-full min-h-[35rem] mx-auto rounded-2xl md:py-10 py-6 px-8 mb-8 text-[#4C4950]">
                   <h2 className="sm:text-2xl text-xl font-semibold sm:mb-3 mb-1">
-                    Hackathon Experience
+                    Datathon Experience
                   </h2>
                   <div className="flex flex-col">
                     {hackathonExperienceQuestions.map((obj, idx) => (
@@ -365,7 +365,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
                   </div>
                   {/* Resume Upload */}
                   <div className=" mt-8">
-                    Upload your resume:
+                    Upload your Resume:
                     <br />
                     <input
                       onChange={(e) => handleResumeFileChange(e)}
@@ -417,7 +417,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
               }}
             >
               <ChevronLeftIcon />
-              previous page
+              Previous Page
             </div>
           )}
 
@@ -428,7 +428,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
                 setRegistrationSection(registrationSection + 1);
               }}
             >
-              next page
+              Next Page
               <ChevronRightIcon />
             </div>
           )}
