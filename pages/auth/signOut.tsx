@@ -22,7 +22,7 @@ export default function SignOutPage() {
 
   return (
     <div className="p-4 text-center flex flex-col justify-center">
-      <div className="max-w-3xl mx-auto p-4">Signing out of HackPortal</div>
+      <div className="max-w-3xl mx-auto p-4">Signing out of UTA Datathon</div>
     </div>
   );
 }

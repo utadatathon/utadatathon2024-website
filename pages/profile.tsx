@@ -59,7 +59,7 @@ export default function ProfilePage() {
   };
 
   if (!isSignedIn) {
-    return <div className="p-4 flex-grow text-center">Sign in to see your profile!</div>;
+    return <div className="p-4 flex-grow text-center">Sign in to see your Profile!</div>;
   }
 
   if (!hasProfile) {
@@ -102,7 +102,7 @@ export default function ProfilePage() {
           <h1 className="text-xl">{profile.studyLevel}</h1>
 
           <div className="font-semibold md:text-2xl text-xl mt-6" mb-1>
-            Number of Hackathons Attended
+            Number of Datathons Attended
           </div>
           <h1 className="text-xl">{profile.hackathonExperience}</h1>
 
