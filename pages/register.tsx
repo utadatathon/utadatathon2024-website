@@ -380,6 +380,13 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
                       Accepted file types: .pdf, .doc, .docx, .png, .jpeg, .txt, .tex, .rtf
                     </p>
                   </div>
+                  
+                  {/* Disclaimer */}
+                  <div>
+                    <br />
+                    <p className="text-complementary/80">Photography Disclaimer: By submitting this form, you consent to participate in the event and agree to be photographed. This is a public event which will be photographed and recorded. If you would not like to be photographed please contact datathon@uta.edu.</p>
+                  </div>
+
                   {/* Submit */}
                   <div className="mt-8 text-white">
                     <button

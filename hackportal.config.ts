@@ -419,25 +419,17 @@ export const hackPortalConfig: HackPortalConfig = {
             initialValue: [],
             options: [
               {
-                title: 'State Farm',
-                value: 'State Farm',
+                title: 'Sponsor 1',
+                value: 'Sponsor 1',
               },
               {
-                title: 'American Airlines',
-                value: 'American Airlines',
+                title: 'Sponsor 2',
+                value: 'Sponsor 2',
               },
               {
-                title: 'Capital One',
-                value: 'Capital One',
-              },
-              {
-                title: 'Ebay',
-                value: 'Ebay',
-              },
-              {
-                title: 'Facebook',
-                value: 'Facebook',
-              },
+                title: 'Sponsor 3',
+                value: 'Sponsor 3',
+              }
             ],
           },
         ],
