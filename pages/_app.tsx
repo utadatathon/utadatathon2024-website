@@ -27,6 +27,7 @@ initFirebase();
  * This is the root of the component heirarchy. When the site is hydrated, this
  * will load into memory and never re-initialize unless the page refreshes.
  */
+
 function PortalApp({ Component, pageProps }: AppProps) {
   return (
     <DndProvider backend={HTML5Backend}>
@@ -40,7 +41,7 @@ function PortalApp({ Component, pageProps }: AppProps) {
                 name="viewport"
                 content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
               />
-              <title>UTA Datathon</title> {/* !change */}
+              <title>UTA Datathon</title>
               <meta name="description" content="Welcome to UTA Datathon 2024." />
               {process.env.ENABLE_PWA ||
                 (process.env.NODE_ENV !== 'development' && (

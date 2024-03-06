@@ -6,12 +6,12 @@ module.exports = {
     extend: {
       colors: {
         primary: '#7B81FF', //purple
-        primaryDark: '#05149C',
+        primaryDark: 'white',
         secondary: '#F2F3FF', //light purple
         secondaryDark: '#BABFFF',
-        complementary: '#4C4950', //gray
-        complementaryDark: '#252427',
-        customBackground: 'hsl(224, 71.4%, 4.1%)', // eady player one
+        complementary: 'white', 
+        complementaryDark: 'linear-gradient(to bottom, #FFFFFF, #9CA3AF)',
+        customBackground: 'hsl(224, 71.4%, 4.1%)', // ready player one dark
       },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],

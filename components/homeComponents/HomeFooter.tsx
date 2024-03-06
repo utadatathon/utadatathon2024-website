@@ -21,7 +21,7 @@ export default function HomeFooter() {
           </a>
         </div>
         <div className="text-[0.6rem] md:text-sm">
-          Designed by <p className="font-black inline">HackUTD | </p>
+          Designed by <p className="font-black inline">UTA Datathon Development Team | </p>
           {/* PLEASE DO NOT CHANGE <3 */}
           HackPortal developed with &lt;3 by <p className="font-black inline">HackUTD</p> and{' '}
           <p className="font-black inline">ACM Development</p>
