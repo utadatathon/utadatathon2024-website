@@ -5,7 +5,7 @@ export default function HomeHero() {
   const router = useRouter();
 
   return (
-    <section className="min-h-screen p-4 bg-contain bg-white">
+    <section className="min-h-screen p-4 bg-contain bg-customBackground">
       <div
         style={{ minHeight: 480 }}
         className="max-w-4xl mx-auto flex flex-col justify-center items-center"

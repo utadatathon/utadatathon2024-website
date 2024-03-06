@@ -41,7 +41,7 @@ function PortalApp({ Component, pageProps }: AppProps) {
                 content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
               />
               <title>UTA Datathon</title> {/* !change */}
-              <meta name="description" content="Your all-in-one guide to this hackathon." />
+              <meta name="description" content="Welcome to UTA Datathon 2024." />
               {process.env.ENABLE_PWA ||
                 (process.env.NODE_ENV !== 'development' && (
                   <link rel="manifest" href="/manifest.json" />
@@ -51,7 +51,7 @@ function PortalApp({ Component, pageProps }: AppProps) {
               <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
               <meta name="theme-color" content="#5D5FEF" />
             </Head>
-            <div className="min-h-screen flex flex-col bg-white">
+            <div className="min-h-screen flex flex-col bg-customBackground">
               <AppHeader />
               <Component {...pageProps} />
             </div>

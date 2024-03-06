@@ -11,6 +11,7 @@ module.exports = {
         secondaryDark: '#BABFFF',
         complementary: '#4C4950', //gray
         complementaryDark: '#252427',
+        customBackground: 'hsl(224, 71.4%, 4.1%)', // eady player one
       },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
