@@ -9,16 +9,7 @@ export default function HomeFooter() {
       <div className="flex flex-col items-center justify-center gap-2 text-complementary text-center">
         <div className="text-base md:text-lg">
           {' '}
-          {/* !change */}
-          Checkout HackUTD&apos;s{' '}
-          <a
-            href="https://acmutd.co/"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="font-black hover:underline"
-          >
-            Organizer website
-          </a>
+          &copy; UTA Datathon 2024
         </div>
         <div className="text-[0.6rem] md:text-sm">
           Designed by <p className="font-black inline">UTA Datathon Development Team | </p>
@@ -27,39 +18,65 @@ export default function HomeFooter() {
           <p className="font-black inline">ACM Development</p>
           {/* PLEASE DO NOT CHANGE <3 */}
         </div>
+
+        
         <div className="flex flex-row justify-center items-center space-x-6">
-          {/* !change */}
           <a
-            href="mailto:email@organization.com"
+            href="https://catalog.uta.edu/academicregulations/dishonesty/"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:underline  whitespace-nowrap"
+          >
+            UTA Code of Conduct
+          </a>
+          <a
+            href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:underline  whitespace-nowrap"
+          >
+            MLH Code of Conduct
+          </a>
+          <a
+            href="https://docs.github.com/en/site-policy/github-terms/github-community-code-of-conduct"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:underline  whitespace-nowrap"
+          >
+            Github Code of Conduct
+          </a>
+          <a
+            href="https://discord.com/guidelines"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:underline  whitespace-nowrap"
+          >
+            Discord Community Guidelines
+          </a>
+          <a
+            href="datathon@uta.edu"
             rel="noopener noreferrer"
             target="_blank"
             className="hover:underline md:mr-8"
           >
             Contact Us
           </a>
-          {/* !change */}
-          <a
-            href="https://github.com/acmutd/hackportal"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:underline  whitespace-nowrap"
-          >
-            Source Code
-          </a>
+          
+          
         </div>
         {/* Social icons */} {/* !change */}
         <div className="space-x-8 > * + *">
-          <a href="https://twitter.com/hackutd" rel="noopener noreferrer" target="_blank">
+          <a href="" rel="noopener noreferrer" target="_blank">
             <TwitterIcon className="footerIcon" />
           </a>
           <a
-            href="https://www.instagram.com/hackutd/?hl=en"
+            href="https://www.instagram.com/utadatathon/"
             rel="noopener noreferrer"
             target="_blank"
           >
             <InstagramIcon className="footerIcon" />
           </a>
-          <a href="https://www.facebook.com/hackutd/" rel="noopener noreferrer" target="_blank">
+          <a href="" rel="noopener noreferrer" target="_blank">
             <FacebookIcon className="footerIcon" />
           </a>
         </div>
