@@ -10,11 +10,11 @@ export default function HomeHero() {
         style={{ minHeight: 480 }}
         className="max-w-4xl mx-auto flex flex-col justify-center items-center"
       >
-        <h1 className="text-center md:text-8xl text-6xl font-bold text-primaryDark">HackPortal</h1>{' '}
+        <h1 className="text-center md:text-8xl text-6xl font-bold text-primaryDark">UTA Datathon 2024</h1>{' '}
         {/* !change */}
         <p className="text-center my-4 font-semibold md:text-xl text-md text-primaryDark opacity-80">
           {' '}
-          {/* !change */}Powered by HackUTD and ACM Dev
+          {/* !change */}Powered by UTA Libraries
         </p>
       </div>
       {/* TODO: Programmatically show these based on configured times/organizer preference */}

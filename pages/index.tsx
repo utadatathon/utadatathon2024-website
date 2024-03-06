@@ -3,8 +3,6 @@ import { GetServerSideProps } from 'next';
 import { useEffect, useState } from 'react';
 import { RequestHelper } from '../lib/request-helper';
 import HomeHero from '../components/homeComponents/HomeHero';
-import HomeNotif from '../components/homeComponents/HomeNotif';
-import HomeVideoStats from '../components/homeComponents/HomeVideoStats';
 import HomeAbout from '../components/homeComponents/HomeAbout';
 import HomeSpeakers from '../components/homeComponents/HomeSpeakers';
 import HomeChallenges from '../components/homeComponents/HomeChallenges';
@@ -43,14 +41,12 @@ export default function Home(props: {
   return (
     <>
       <Head>
-        <title>HackPortal</title> {/* !change */}
-        <meta name="description" content="A default HackPortal instance" /> {/* !change */}
+        <title>UTA Datathon</title> {/* !change */}
+        <meta name="description" content="UTA Datathon 2024" /> {/* !change */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <HomeNotif />
       <HomeHero />
-      <HomeVideoStats />
       <HomeAbout />
       <HomeSpeakers keynoteSpeakers={props.keynoteSpeakers} />
       <HomeChallenges challenges={props.challenges} />

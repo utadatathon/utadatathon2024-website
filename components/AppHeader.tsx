@@ -100,7 +100,7 @@ export default function AppHeader() {
               {/* !change src */}
               <Image src={'/assets/hp-logo.png'} width="45px" height="35px" />
               <span className="text-lg font-black md:z-0 md:text-3xl text-primaryDark">
-                HackPortal
+                
               </span>
             </a>
           </Link>

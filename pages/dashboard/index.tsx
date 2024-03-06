@@ -91,7 +91,7 @@ export default function Dashboard(props: {
       <div className="flex flex-wrap flex-grow">
         <Head>
           <title>UTA Datathon - Dashboard</title> {/* !change */}
-          <meta name="description" content="HackPortal's Dashboard" />
+          <meta name="description" content="UTA Datathon's Dashboard" />
         </Head>
 
         <section id="mainContent" className="2xl:px-32 md:px-16 px-6 bg-white">
