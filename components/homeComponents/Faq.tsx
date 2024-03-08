@@ -8,7 +8,7 @@ import { RequestHelper } from '../../lib/request-helper';
 /**
  * The FAQ page.
  *
- * This page contains frequently asked questions for the hackathon.
+ * This page contains frequently asked questions for the datathon.
  *
  * Route: /about/faq
  */
@@ -47,8 +47,8 @@ export default function FaqPage({ fetchedFaqs }: { fetchedFaqs: AnsweredQuestion
   return (
     <div className="flex flex-col flex-grow">
       <Head>
-        <title>HackPortal</title>
-        <meta name="description" content="HackPortal's Frequently Asked Questions" />
+        <title>UTA Datathon</title>
+        <meta name="description" content="Frequently Asked Questions" />
       </Head>
       {/* <AboutHeader active="/about/faq" /> */}
       <div className="top-6">

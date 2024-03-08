@@ -351,7 +351,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
 
               {/* Sponsor Questions */}
               {registrationSection == 4 && (
-                <section className="bg-white lg:w-3/5 md:w-3/4 w-full min-h-[35rem] mx-auto rounded-2xl md:py-10 py-6 px-8 mb-8 text-[#4C4950]">
+                <section className="bg-black lg:w-3/5 md:w-3/4 w-full min-h-[35rem] mx-auto rounded-2xl md:py-10 py-6 px-8 mb-8 text-[#4C4950]">
                   <h2 className="sm:text-2xl text-xl font-semibold sm:mb-3 mb-1">Sponsor Info</h2>
                   <div className="flex flex-col">
                     {sponsorInfoQuestions.map((obj, idx) => (

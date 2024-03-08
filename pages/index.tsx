@@ -42,8 +42,8 @@ export default function Home(props: {
   return (
     <>
       <Head>
-        <title>UTA Datathon</title> {/* !change */}
-        <meta name="description" content="UTA Datathon 2024" /> {/* !change */}
+        <title>UTA Datathon</title> 
+        <meta name="description" content="UTA Datathon 2024" /> 
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

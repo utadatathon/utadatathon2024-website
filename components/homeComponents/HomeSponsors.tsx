@@ -12,7 +12,7 @@ export default function HomeSponsors(props: { sponsorCard: Sponsor[] }) {
     sponsor.length != 0 && (
       <section className="md:p-12 p-6">
         <div className="flex flex-col flex-grow bg-black">
-          <h4 className="text-complementary font-bold md:text-4xl text-2xl my-4">Sponsors</h4>
+          <h4 className="text-complementary font-bold md:text-4xl text-2xl my-4">Sponsors & Partners</h4>
           {/* Sponsor Card */}
           <section className="flex flex-wrap justify-center p-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
