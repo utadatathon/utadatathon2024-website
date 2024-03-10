@@ -10,31 +10,31 @@ function Question(props) {
   if (props.type === 'text') {
     return (
       <Fragment>
-        <label htmlFor={props.question.id} className="mt-4">
+        <label htmlFor={props.question.id} className="mt-4 py-2">
           {props.question.required ? '*' : ''}
           {props.question.question}
         </label>
         <Field
           id={props.question.id}
           name={props.question.name}
-          className="border border-complementary/20 rounded-md md:p-2 p-1"
+          className="border border-complementary/20 rounded-md md:p-2 p-1 text-black "
         />
         <ErrorMessage
           name={props.question.name}
-          render={(msg) => <div className="text-red-600">{msg}</div>}
+          render={(msg) => <div className="text-red-600 py-2">{msg}</div>}
         />
       </Fragment>
     );
   } else if (props.type === 'number') {
     return (
       <Fragment key={props.question.id}>
-        <label htmlFor={props.question.id} className="mt-4">
+        <label htmlFor={props.question.id} className="mt-4 py-2">
           {props.question.required ? '*' : ''}
           {props.question.question}
         </label>
         <input
           id={props.question.id}
-          className="border border-complementary/20 rounded-md md:p-2 p-1"
+          className="border border-complementary/20 rounded-md md:p-2 p-1 text-black"
           name={props.question.name}
           type="number"
           min={props.question.min}
@@ -52,7 +52,7 @@ function Question(props) {
   } else if (props.type === 'dropdown') {
     return (
       <Fragment>
-        <label htmlFor={props.question.id} className="mt-4">
+        <label htmlFor={props.question.id} className="mt-4 py-2 ">
           {props.question.required ? '*' : ''}
           {props.question.question}
         </label>
@@ -60,7 +60,7 @@ function Question(props) {
           as="select"
           name={props.question.name}
           id={props.question.id}
-          className="border border-complementary/20 rounded-md md:pl-2 md:py-2 pl-1 py-1 w-min text-sm sm:text-base"
+          className="border border-complementary/20 rounded-md md:pl-2 md:py-2 pl-1 py-1 w-min text-sm sm:text-base text-black "
         >
           <option value="" disabled selected></option>
           {props.question.options.map((option) => (
@@ -78,7 +78,7 @@ function Question(props) {
   } else if (props.type === 'checkbox') {
     return (
       <Fragment>
-        <label htmlFor={props.question.name} className="mt-4">
+        <label htmlFor={props.question.name} className="mt-4 py-2">
           {props.question.required ? '*' : ''}
           {props.question.question}
         </label>
@@ -99,7 +99,7 @@ function Question(props) {
   } else if (props.type === 'datalist') {
     return (
       <Fragment>
-        <label htmlFor={props.question.name} className="mt-4">
+        <label htmlFor={props.question.name} className="mt-4 py-2">
           {props.question.required ? '*' : ''}
           {props.question.question}
         </label>
@@ -108,7 +108,7 @@ function Question(props) {
           id={props.question.id}
           name={props.question.name}
           list={props.question.datalist}
-          className="border border-complementary/20 rounded-md md:p-2 p-1"
+          className="border border-complementary/20 rounded-md md:p-2 p-1 text-black"
           autoComplete="off"
         ></Field>
         <datalist id={props.question.datalist}>
@@ -128,7 +128,7 @@ function Question(props) {
   } else if (props.type === 'textArea') {
     return (
       <Fragment>
-        <label htmlFor={props.question.name} className="mt-4">
+        <label htmlFor={props.question.name} className="mt-4 py-2">
           {props.question.required ? '*' : ''}
           {props.question.question}
         </label>
@@ -136,7 +136,7 @@ function Question(props) {
           as="textarea"
           name={props.question.name}
           placeholder={props.question.placeholder}
-          className="border border-complementary/20 rounded-md md:p-2 p-1"
+          className="border border-complementary/20 rounded-md md:p-2 p-1 text-black"
         ></Field>
         <ErrorMessage
           name={props.question.name}

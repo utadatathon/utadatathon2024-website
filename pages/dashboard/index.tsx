@@ -94,7 +94,7 @@ export default function Dashboard(props: {
           <meta name="description" content="UTA Datathon's Dashboard" />
         </Head>
 
-        <section id="mainContent" className="2xl:px-32 md:px-16 px-6 bg-white">
+        <section id="mainContent" className="2xl:px-32 md:px-16 px-6 bg-custombackground w-full">
           <DashboardHeader />
           {/* Spotlight & Announcements */}
           <div className="flex flex-wrap md:my-16 my-10">

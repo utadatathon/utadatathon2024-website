@@ -114,7 +114,7 @@ export default function AuthPage() {
 
   return (
     <>
-      <section className="bg-secondary min-h-screen">
+      <section className="bg-custombackground min-h-screen">
         <div className="p-4">
           <Link href="/" passHref>
             <div className="cursor-pointer items-center inline-flex text-primaryDark font-medium">
@@ -124,10 +124,10 @@ export default function AuthPage() {
           </Link>
         </div>
         <div className="py-2 md:px-16 px-10 flex items-center justify-center flex-wrap">
-          <div className="xl:w-1/2 lg:w-2/3 w-5/6 my-4">
+          <div className="xl:w-1/2 lg:w-2/3 w-5/6 rounded-3xl my-4 bg-gradient-to-br from-slate-900 to-indigo-900">
             <section
               id="signInSection"
-              className="bg-white 2xl:min-h-[30rem] min-h-[28rem] rounded-lg p-6"
+              className=" 2xl:min-h-[30rem] min-h-[28rem] rounded-lg p-6"
             >
               {!passwordResetDialog ? (
                 <>
