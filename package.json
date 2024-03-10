@@ -64,6 +64,7 @@
     "rehype-slug": "^5.0.1",
     "remark-gfm": "^3.0.1",
     "swiper": "^7.4.1",
+    "tailwind-merge": "^2.2.1",
     "webpack": "^5.76.0"
   },
   "devDependencies": {

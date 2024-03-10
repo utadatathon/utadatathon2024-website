@@ -1,7 +1,7 @@
 export default function HomeAbout() {
   return (
     <section className="md:p-12 p-6 text-complementary">
-      <h1 className="md:text-4xl text-2xl font-bold my-4">About UTA Datathon</h1> {/* !change */}
+      <h1 className="md:text-4xl text-2xl font-bold my-4 text-center">About UTA Datathon</h1> {/* !change */}
       <div className="md:text-base text-sm">
         TO BE CHANGED. <br />
         <br />A few of its features include: A fully customizable front end, sign in with email/

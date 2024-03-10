@@ -15,9 +15,10 @@ export default function HomeSpeakers(props: { keynoteSpeakers: KeynoteSpeaker[] 
   return (
     speakers.length != 0 && (
       <section className=" overflow-x-auto min-h-[24rem]">
-        <div className="flex items-start justify-start font-bold md:p-12 p-6 md:text-4xl text-2xl my-4 text-complementary">
+        <div className="flex items-start justify-center font-bold md:p-12 p-6 md:text-4xl text-2xl my-4 text-complementary text-center">
           Speakers
         </div>
+
 
         <Swiper
           navigation={true}

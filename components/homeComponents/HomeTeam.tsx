@@ -15,7 +15,7 @@ export default function HomeTeam(props: { members: TeamMember[] }) {
         {/* Team Members */}
         <div className="flex flex-col flex-grow bg-black">
           <div className="my-2">
-            <h4 className="font-bold p-6 md:text-4xl text-2xl my-4 text-complementary">
+            <h4 className="font-bold p-6 md:text-4xl text-2xl my-4 text-complementary text-center">
               Meet the Team
             </h4>{' '}
             {/* !change */}

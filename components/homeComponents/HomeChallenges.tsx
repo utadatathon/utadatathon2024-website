@@ -63,7 +63,7 @@ export default function HomeChallenges(props: { challenges: Challenge[] }) {
   return (
     challenges.length != 0 && (
       <section className="md:py-12 py-6 xl:w-9/10 w-11/12 m-auto">
-        <div className="font-bold md:text-4xl text-2xl my-4 text-complementary">Challenges</div>
+        <div className="font-bold md:text-4xl text-2xl my-4 text-complementary text-center">Challenges</div>
         {/* Challenge Orgs Selectors*/}
         <div className="relative mt-4 sm:w-[95%] w-[85%] mx-auto">
           <Swiper

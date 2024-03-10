@@ -52,8 +52,8 @@ export default function FaqPage({ fetchedFaqs }: { fetchedFaqs: AnsweredQuestion
       </Head>
       {/* <AboutHeader active="/about/faq" /> */}
       <div className="top-6">
-        <div className="flex flex-row justify-between items-center py-2">
-          <h4 className="font-bold md:text-4xl text-2xl my-4 text-complementary">FAQ</h4>
+        <div className="py-2 w-full max-w-3xl mx-auto text-center">
+          <h4 className="font-bold md:text-4xl text-2xl my-4 text-complementary">Frequently Asked Questions</h4>
           <div className="flex flex-row items-center gap-x-2">
             <button
               onClick={() => {
