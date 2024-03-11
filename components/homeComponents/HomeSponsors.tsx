@@ -11,7 +11,7 @@ export default function HomeSponsors(props: { sponsorCard: Sponsor[] }) {
   return (
     sponsor.length != 0 && (
       <section className="md:p-12 p-6">
-        <div className="flex flex-col flex-grow rounded-3xl p-10 mx-auto w-full sm:w-4/5 bg-white">
+        <div className="flex flex-col flex-grow rounded-3xl px-10 py-4 mx-auto w-full sm:w-4/5 bg-white">
           <h4 className="text-complementary font-bold md:text-4xl text-2xl p-10 my-4 text-center bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent">Sponsors & Partners</h4>
           {/* Sponsor Card */}
           <section className="flex flex-wrap justify-center p-4">
