@@ -19,9 +19,9 @@ export default function HomeTeam(props: { members: TeamMember[] }) {
         </video>
 
         {/* Content Overlay */}
-        <div className="flex flex-col flex-grow rounded-3xl p-10 mx-auto w-full sm:w-4/5 bg-gradient-to-br from-slate-900 to-indigo-900 relative z-10">
+        <div className="flex flex-col flex-grow rounded-3xl p-10 mx-auto w-full sm:w-4/5 bg-gradient-to-b from-indigo-900 via-violet-700 to-violet-200 relative z-9">
           <div className="my-2">
-            <h4 className="font-bold p-6 md:text-4xl text-2xl my-4 text-complementary text-center bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent">
+            <h4 className="font-bold p-6 md:text-4xl text-2xl my-4 text-complementary text-center bg-white bg-clip-text text-transparent">
               Meet the Team
             </h4>{' '}
             <div className="flex flex-wrap justify-center p-4">

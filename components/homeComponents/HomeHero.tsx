@@ -19,7 +19,7 @@ export default function HomeHero() {
 
       <div
         style={{ minHeight: 480 }}
-        className="relative max-w-4xl mx-auto flex flex-col justify-center items-center z-10"
+        className="relative max-w-4xl mx-auto flex flex-col justify-center items-center z-9"
       >
         <h1 className="text-center md:text-8xl text-6xl font-bold text-primaryDark">UTA Datathon 2024</h1>{' '}
         {/* !change */}
@@ -31,7 +31,7 @@ export default function HomeHero() {
 
       {/* TODO: Programmatically show these based on configured times/organizer preference */}
 
-      <div className="relative flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-0 space-y-3 z-10">
+      <div className="relative flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-0 space-y-3 z-9">
         {buttonDatas.map((button) => (
           <button
             key={button.text}
