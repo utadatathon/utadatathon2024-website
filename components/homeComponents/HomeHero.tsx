@@ -5,10 +5,21 @@ export default function HomeHero() {
   const router = useRouter();
 
   return (
-    <section className="min-h-screen p-4 bg-contain bg-customBackground">
+    <section className="relative min-h-screen p-4 bg-contain bg-customBackground">
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/bg.mp4" type="video/mp4" />
+        {/* Add additional source elements for other video formats if needed */}
+      </video>
+
       <div
         style={{ minHeight: 480 }}
-        className="max-w-4xl mx-auto flex flex-col justify-center items-center"
+        className="relative max-w-4xl mx-auto flex flex-col justify-center items-center z-9"
       >
         <h1 className="text-center md:text-8xl text-6xl font-bold text-primaryDark">UTA Datathon 2024</h1>{' '}
         {/* !change */}
@@ -17,9 +28,10 @@ export default function HomeHero() {
           {/* !change */}Powered by UTA Libraries
         </p>
       </div>
+
       {/* TODO: Programmatically show these based on configured times/organizer preference */}
 
-      <div className="flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-0 space-y-3 > *">
+      <div className="relative flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-0 space-y-3 z-9">
         {buttonDatas.map((button) => (
           <button
             key={button.text}
