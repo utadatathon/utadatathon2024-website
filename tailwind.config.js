@@ -11,7 +11,7 @@ module.exports = {
         secondaryDark: '#BABFFF',
         complementary: 'white', 
         complementaryDark: 'linear-gradient(to bottom, #FFFFFF, #9CA3AF)',
-        customBackground: 'hsl(224, 71.4%, 4.1%)', // ready player one dark
+        customBackground: '#070719', // ready player one dark
       },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
@@ -57,5 +57,8 @@ module.exports = {
       display: ['group-hover'],
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
+
 };

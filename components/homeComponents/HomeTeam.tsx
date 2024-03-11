@@ -13,9 +13,9 @@ export default function HomeTeam(props: { members: TeamMember[] }) {
     members.length != 0 && (
       <section className="md:p-12  p-6">
         {/* Team Members */}
-        <div className="flex flex-col flex-grow bg-black">
+        <div className="flex flex-col flex-grow rounded-3xl p-10 mx-auto w-full sm:w-4/5 bg-gradient-to-br from-slate-900 to-indigo-900">
           <div className="my-2">
-            <h4 className="font-bold p-6 md:text-4xl text-2xl my-4 text-complementary">
+            <h4 className="font-bold p-6 md:text-4xl text-2xl my-4 text-complementary text-center bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent">
               Meet the Team
             </h4>{' '}
             {/* !change */}

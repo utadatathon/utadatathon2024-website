@@ -419,16 +419,16 @@ export const hackPortalConfig: HackPortalConfig = {
             initialValue: [],
             options: [
               {
-                title: 'Sponsor 1',
-                value: 'Sponsor 1',
+                title: 'INFORMS Analytics',
+                value: 'INFORMS Analytics',
               },
               {
-                title: 'Sponsor 2',
-                value: 'Sponsor 2',
+                title: 'IEEE Xplore Digital Library',
+                value: 'IEEE Xplore Digital Library',
               },
               {
-                title: 'Sponsor 3',
-                value: 'Sponsor 3',
+                title: 'Wavicle Data Solutions',
+                value: 'Wavicle Data Solutions',
               }
             ],
           },

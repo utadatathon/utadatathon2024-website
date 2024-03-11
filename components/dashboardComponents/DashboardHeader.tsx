@@ -34,14 +34,14 @@ export default function DashboardHeader() {
           >
             HackCenter
           </NavLink>
-          <NavLink
+          {/* <NavLink
             href="/dashboard/questions"
             exact={true}
             activeOptions={'border-b-4 border-primaryDark text-complementaryDark'}
             className="xl:ml-6 ml-4 py-2"
           >
             Ask a Question
-          </NavLink>
+          </NavLink> */}
         </div>
       </header>
       <div className="md:hidden mt-6">
@@ -60,11 +60,13 @@ export default function DashboardHeader() {
                 <div>HackCenter</div>
               </Link>
             </li>
-            <li className="p-2 hover:bg-secondary cursor-pointer">
+
+            {/* <li className="p-2 hover:bg-secondary cursor-pointer">
               <Link href="/dashboard/questions" passHref>
                 <div>Ask a Question</div>
               </Link>
-            </li>
+            </li> */}
+
           </ul>
         </div>
       </div>

@@ -1,6 +1,6 @@
 export const buttonDatas = [
   { text: 'Apply', path: '/' },
-  { text: 'Register', path: '/' },
+  { text: 'Discord', path: '/' },
   { text: 'Dev Post', path: '/' },
 ];
 
@@ -8,7 +8,7 @@ export const navItems = [
   { text: 'Home', path: '/' },
   { text: 'Dashboard', path: '/dashboard' },
   { text: 'Schedule', path: '/schedule' },
-  { text: 'HackerPack', path: '/hackerpacks' },
+  // { text: 'HackerPack', path: '/hackerpacks' },
 ];
 
 export const stats = [

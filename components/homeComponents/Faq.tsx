@@ -8,7 +8,7 @@ import { RequestHelper } from '../../lib/request-helper';
 /**
  * The FAQ page.
  *
- * This page contains frequently asked questions for the hackathon.
+ * This page contains frequently asked questions for the datathon.
  *
  * Route: /about/faq
  */
@@ -47,13 +47,13 @@ export default function FaqPage({ fetchedFaqs }: { fetchedFaqs: AnsweredQuestion
   return (
     <div className="flex flex-col flex-grow">
       <Head>
-        <title>HackPortal</title>
-        <meta name="description" content="HackPortal's Frequently Asked Questions" />
+        <title>UTA Datathon</title>
+        <meta name="description" content="Frequently Asked Questions" />
       </Head>
       {/* <AboutHeader active="/about/faq" /> */}
       <div className="top-6">
-        <div className="flex flex-row justify-between items-center py-2">
-          <h4 className="font-bold md:text-4xl text-2xl my-4 text-complementary">FAQ</h4>
+        <div className="py-2 w-full max-w-3xl mx-auto text-center">
+          <h4 className="font-bold md:text-4xl text-2xl my-4 text-complementary bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent">Frequently Asked Questions</h4>
           <div className="flex flex-row items-center gap-x-2">
             <button
               onClick={() => {
