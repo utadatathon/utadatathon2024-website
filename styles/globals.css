@@ -194,3 +194,124 @@ a.link {
   transition: opacity 0.5s ease-in;
   transition-delay: 3s;
 }
+
+@keyframes photoReveal {
+  from {
+    filter: brightness(0%);
+    transform: scale(0.8);
+  }
+  to {
+    filter: brightness(100%);
+    transform: scale(1);
+  }
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper .fade-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 3s ease; /* Adjust time as needed */
+  z-index: 1; /* Ensure this image is above the other */
+}
+
+.show-image .fade-in {
+  opacity: 1;
+}
+
+.fade-in {
+  animation: fadeIn 5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.image-container {
+  position: relative;
+  width: 500px; 
+  height: 500px; 
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkCursor {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+.typewriter {
+  font-family: 'ReadyPlayer', monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typewriter 3.5s steps(40, end),
+    blinkCursor .75s step-end infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: #ADD8E6;
+  text-align: center;
+  /* Fluorescent glow effect */
+  text-shadow:
+    0 0 5px #ADD8E6,
+    0 0 10px #00FFFF, 
+    /* 0 0 20px #00FFFF,  */
+    /* 0 0 30px #00FFFF, */
+    /* 0 0 40px #00FFFF,  */
+    /* 0 0 50px #00FFFF,  */
+    0 0 75px #00FFFF; 
+}
+
+@keyframes typewriter2 {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkCursor2 {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+.typewriter2 {
+  font-family: 'Roboto';
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  animation: 
+    typewriter2 12s steps(40, end),
+    blinkCursor2 .75s step-end infinite;
+  position: absolute;
+  top: 60%; /* Adjust based on the exact positioning you want */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  color: #ADD8E6;
+  text-align: center;
+  text-shadow:
+  0 0 5px #ADD8E6,
+  0 0 10px #00FFFF,
+    /* 0 0 20px #00FFFF,  */
+    /* 0 0 30px #00FFFF, */
+    /* 0 0 40px #00FFFF,  */
+    /* 0 0 50px #00FFFF,  */
+    0 0 75px #00FFFF; 
+}
+
+
+

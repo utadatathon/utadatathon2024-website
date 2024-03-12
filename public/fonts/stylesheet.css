@@ -150,5 +150,36 @@
     font-style: normal;
 }
 
+/* styles/fonts.css */
+@font-face {
+    font-family: 'ReadyPlayer';
+    src: url('ReadyPlayerOne-rwzx.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
+
+
+
+  /* styles/stylesheet.css */
+.h1-custom-font {
+    font-family: 'ReadyPlayer', sans-serif; /* Fallback to sans-serif if the custom font fails to load */
+  }
+  
+.title-container {
+    display: flex;
+    justify-content: center; /* This will center the items in the container */
+    align-items: center; /* This will vertically align the items if they have different heights */
+    gap: 1px; /* Optional: Allows the titles to wrap to a new line on smaller screens */
+}
+
+.title {
+  font-size: 6xl; /* Adjust the size as needed */
+  font-weight: bold;
+  margin: 0 2px; /* Adds space between the titles */
+}
+
+/* Make sure to adjust the class names and styles based on your actual setup */
+
+  
 
