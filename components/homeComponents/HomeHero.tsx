@@ -1,39 +1,54 @@
 import { useRouter } from 'next/router';
 import { buttonDatas } from '../../lib/data';
-import Image from 'next/image'
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 export default function HomeHero() {
   const router = useRouter();
-  const [imageLoaded, setImageLoaded] = useState(false);
- 
+  const [showVideo, setShowVideo] = useState(false);
+  const [showText, setShowText] = useState(false);
 
-  
+  // Function to call to show the text
+  const handleUserInteraction = () => {
+    setShowVideo(false); // Ensure video is not displayed
+    setShowText(true); // Trigger text display
+  };
+
+  useEffect(() => {
+    // Add event listeners when component mounts
+    window.addEventListener('click', handleUserInteraction);
+    window.addEventListener('scroll', handleUserInteraction, { passive: true });
+
+    // Cleanup event listeners when component unmounts
+    return () => {
+      window.removeEventListener('click', handleUserInteraction);
+      window.removeEventListener('scroll', handleUserInteraction);
+    };
+  }, []);
 
   return (
     <section className="min-h-screen p-4 bg-contain bg-black">
-      <div
-        style={{ maxHeight: 700 }}
-        className="max-w-4xl mx-auto flex flex-wrap justify-center items-center"      >
-<div className="video-container relative w-full flex justify-center items-center" >          
-  <video width="920" height="340" autoPlay>
-    <source src="/assets/my_first_vr_video.mp4" type="video/mp4" />
-  </video>
-</div>
-
-
-
-        {/* <h1 className="text-center md:text-8xl text-6xl font-bold text-primaryDark h1-custom-font" >UTA Datathon</h1> */}
-        {/* <h1 className="text-center md:text-8xl text-6xl font-bold text-primaryDark" >2024</h1>{' '} */}
-        {/* !change */}
-        {/* <p className="text-center my-4 font-semibold md:text-xl text-md text-primaryDark opacity-80 h1-custom-font"> */}
-          {/* {' '} */}
-          {/* !changePowered by UTA Libraries */}
-        {/* </p> */}
+    <div
+      style={{ maxHeight: 920 }}
+      className="max-w-4xl mx-auto flex flex-wrap justify-center items-center"
+    >
+      <div className="relative w-full flex justify-center items-center">
+        <Image
+          src="/assets/my_first_vr_photo.png"
+          alt="VR Image"
+          width={920}
+          height={510}
+          onLoadingComplete={() => setShowText(false)}
+        />
+        {showText && (
+          <>
+            <p className="typewriter">&nbsp;&nbsp;UTA DATATHON</p>
+            <p className="typewriter2">&nbsp;&nbsp;&nbsp;2024</p>
+          </>
+        )}
       </div>
-      {/* TODO: Programmatically show these based on configured times/organizer preference */}
-
-      <div className="flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-0 space-y-3 > *">
+    </div>
+      <div className="flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-0 space-y-3">
         {buttonDatas.map((button) => (
           <button
             key={button.text}
