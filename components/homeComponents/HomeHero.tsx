@@ -48,8 +48,19 @@ export default function HomeHero() {
   });
 
   return (
-    <section className="min-h-screen p-4 bg-contain bg-black">
-      <div style={{ maxHeight: 920 }} className="max-w-4xl mx-auto flex flex-wrap justify-center items-center">
+    <section className="relative min-h-screen p-4 bg-contain bg-black">
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/bg.mp4" type="video/mp4" />
+        {/* Add additional source elements for other video formats if needed */}
+      </video>
+
+      <div style={{ maxHeight: 920 }} className="relative max-w-4xl mx-auto flex flex-wrap justify-center items-center z-9">
         <div className="relative w-full flex justify-center items-center">
           <Image
             src="/assets/my_first_vr_photo.png"

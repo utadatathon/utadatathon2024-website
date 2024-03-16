@@ -83,7 +83,7 @@ export default function Dashboard(props: {
 
   if (!isSignedIn)
     return (
-      <div className="text-2xl font-black text-center">Please sign-in to view your Dashboard</div>
+      <div className="text-2xl font-black text-center p-12 text-complementary mt-20">Please sign-in to view your Dashboard</div>
     );
 
   return (
@@ -94,8 +94,8 @@ export default function Dashboard(props: {
           <meta name="description" content="UTA Datathon's Dashboard" />
         </Head>
 
-        <section id="mainContent" className="2xl:px-32 md:px-16 px-6 bg-white">
-          <DashboardHeader />
+        <section id="mainContent" className="2xl:px-32 md:px-16 px-6 bg-custombackground w-full">
+          {/* <DashboardHeader /> */}
           {/* Spotlight & Announcements */}
           <div className="flex flex-wrap md:my-16 my-10">
             {/* Spotlight Events */}
@@ -136,7 +136,7 @@ export default function Dashboard(props: {
             )}
             {/* Announcements */}
             <div className={`${eventCount > 0 ? 'lg:w-2/5' : 'lg:w-full'} w-full h-96`}>
-              <h1 className="md:text-3xl text-xl font-black">Announcements</h1>
+              <h1 className="md:text-3xl text-xl font-black text-complementary p-4 text-center">Announcements</h1>
               <div id="announcement-items" className="overflow-y-scroll h-9/10">
                 {announcements.map((announcement, idx) => {
                   const dateObj = new Date(announcement.timestamp!);
@@ -157,9 +157,9 @@ export default function Dashboard(props: {
 
           {/* Challenges */}
           <div className="flex flex-col items-center my-8">
-            <h1 className="md:text-3xl text-xl font-black">Challenges</h1>
+            <h1 className="md:text-3xl text-xl font-black text-complementary p-4">Challenges</h1>
             {/* Cards */}
-            <div className="challengeGrid my-8">
+            <div className="challengeGrid my-8 text-complementary p-4">
               {challenges.map(({ title, description, prizes }, idx) => (
                 <ChallengeCard key={idx} title={title} description={description} prizes={prizes} />
               ))}
