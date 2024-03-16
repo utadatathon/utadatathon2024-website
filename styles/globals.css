@@ -263,17 +263,17 @@ a.link {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 48px;
-  color: #ADD8E6;
+  color: #87CEEB;
   text-align: center;
   /* Fluorescent glow effect */
   text-shadow:
-    0 0 5px #ADD8E6,
-    0 0 10px #00FFFF,
+    0 0 5px #87CEEB,
+    0 0 10px #87CEEB,
     /* 0 0 20px #00FFFF,  */
     /* 0 0 30px #00FFFF, */
     /* 0 0 40px #00FFFF,  */
     /* 0 0 50px #00FFFF,  */
-    0 0 75px #00FFFF; 
+    0 0 75px #0070FA; 
 }
 
 @keyframes typewriter2 {
@@ -301,17 +301,43 @@ a.link {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 36px;
-  color: #ADD8E6;
+  color: #87CEEB;
   text-align: center;
+  /* Fluorescent glow effect */
   text-shadow:
-  0 0 5px #ADD8E6,
-  0 0 10px #00FFFF,
+    0 0 5px #87CEEB,
+    0 0 10px #87CEEB,
     /* 0 0 20px #00FFFF,  */
     /* 0 0 30px #00FFFF, */
     /* 0 0 40px #00FFFF,  */
     /* 0 0 50px #00FFFF,  */
-    0 0 75px #00FFFF; 
+    0 0 75px #0070FA; 
 }
 
+/* Add to your CSS file */
+.countdown-box {
+  background-color: #333; /* Dark background for each box */
+  color: #fff; /* White text color */
+  padding: 10px 20px;
+  border-radius: 5px; /* Slightly rounded corners for the boxes */
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.countdown-box span {
+  display: block;
+  font-family: 'Courier New', Courier, monospace; /* Gives a digital clock appearance */
+  text-align: center;
+}
+
+.countdown-number {
+  font-size: 30px; /* Large, easy-to-read numbers */
+  font-weight: bold;
+}
+
+.countdown-label {
+  font-size: 16px; /* Smaller label text */
+  letter-spacing: 1px; /* Spacing for aesthetic */
+}
 
 
