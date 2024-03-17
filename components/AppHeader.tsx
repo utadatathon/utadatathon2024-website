@@ -74,15 +74,15 @@ export default function AppHeader() {
   return (
     <>
       <div className="min-h-[5rem]"></div>
-      <header className="top-0 fixed justify-between flex flex-row w-full bg-customBackground items-center h-20 z-10 lg:px-4 px-2 drop-shadow">
+      <header className="top-0 fixed justify-between flex flex-row w-full backdrop-blur-sm bg-customBackground/30 items-center h-20 z-10 lg:px-4 px-2 drop-shadow">
         <div className="flex flex-row order-1 md:order-none items-center">
           {/* Smartphone nav */}
-          <div onClick={toggleMenu} className="md:hidden cursor-pointer text-complementary">
+          <div onClick={toggleMenu} className="md:hidden cursor-pointer text-white">
             {mobileIcon ? <MenuIcon /> : <CloseIcon />}
             <ul
               className={`${
                 showMenu ? 'translate-x-0' : '-translate-x-full'
-              } transform transition-all ease-out duration-300 flex w-6/12 h-screen flex-col bg-white fixed top-0 left-0 z-[-1] mt-[80px] border-t-2 border-complementary/10`}
+              } transform transition-all ease-out duration-300 flex w-6/12 h-screen flex-col bg-customBackground fixed top-0 left-0 z-[-1] mt-[80px] border-t-2 border-customBackground/10`}
             >
               {dynamicNavItems
                 .filter(({ text }) => text !== 'Home')

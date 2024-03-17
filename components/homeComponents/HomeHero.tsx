@@ -5,7 +5,7 @@ export default function HomeHero() {
   const router = useRouter();
 
   return (
-    <section className="relative min-h-screen p-4 bg-contain bg-customBackground">
+    <section className="relative min-h-screen p-4 bg-contain bg-customBackground mt-[-5rem]">
       {/* Video Background */}
       <video
         autoPlay
