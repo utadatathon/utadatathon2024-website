@@ -4,8 +4,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 export default function HomeFooter() {
   return (
     <section className="px-6 py-8 md:text-base text-xs">
-      <hr className="my-4 bg-complementary" />
-      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-2 lg:gap-32 lg:w-4/5 mx-auto text-complementary lg:text-left text-center lg:p-6  p-2">
+      <hr className="my-4 bg-complementary/90" />
+      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-2 lg:gap-32 lg:w-4/5 mx-auto text-complementary/75 lg:text-left text-center lg:p-6  p-2">
         <div className="lg:w-1/2 lg:ml-4">
           <div className="text-base md:text-lg">
             {' '}

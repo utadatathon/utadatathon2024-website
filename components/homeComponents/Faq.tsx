@@ -63,7 +63,7 @@ export default function FaqPage({ fetchedFaqs }: { fetchedFaqs: AnsweredQuestion
                   expandAll();
                 }
               }}
-              className="font-bold"
+              className="mx-auto font-bold text-white/60"
             >
               {disclosuresStatus.every((status) => status) ? 'Close All' : 'Expand All'}
             </button>

@@ -21,7 +21,7 @@ function FaqExpandCloseButton({
   }
   return (
     <>
-      <button onClick={handleExpandCloseAll(disclosuresStatus)} className="font-bold">
+      <button onClick={handleExpandCloseAll(disclosuresStatus)} className="font-bold text-white">
         {disclosuresStatus.every((status) => status) ? 'Close All' : 'Expand All'}
       </button>
       <ChevronDownIcon
