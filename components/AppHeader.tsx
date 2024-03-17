@@ -124,13 +124,36 @@ export default function AppHeader() {
         </div>
         <div className="flex flex-row justify-center items-center order-2 md:order-3">
           <button
-            className="font-header font-bold bg-secondary rounded-full text-primaryDark text-sm xl:px-10 md:px-6 px-10 py-1 hover:bg-primaryDark hover:text-secondary transition duration-300 ease-in-out"
+            className="font-header font-bold bg-gradient-to-br from-purple-900 to-indigo-600 rounded-full text-primaryDark text-sm xl:px-10 md:px-6 px-10 py-1 hover:bg-primaryDark hover:text-secondary transition duration-300 ease-in-out"
             onClick={toggleDialog}
           >
             {!user || !isSignedIn ? 'Sign in' : hasProfile ? 'Profile' : 'Register'}
           </button>
         </div>
         {showProfileDialog && <ProfileDialog onDismiss={dismissDialog} />}
+
+        <a
+          id="mlh-trust-badge"
+          style={{
+            display: 'block',
+            maxWidth: '100px',
+            minWidth: '60px',
+            position: 'fixed',
+            right: '50px',
+            top: '5rem',
+            width: '10%',
+            zIndex: '-2'
+          }}
+          href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white"
+          target="_blank"
+        >
+          <img
+            src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg"
+            alt="Major League Hacking 2024 Hackathon Season"
+            style={{ width: '100%' }}
+          />
+        </a>
+
       </header>
     </>
   );
