@@ -12,6 +12,23 @@ body {
 }
 
 @font-face {
+  font-family: 'ReadyPlayerOne';
+  src: url('/fonts/ReadyPlayerOne.ttf') format('truetype');
+}
+.custom-font {
+  font-family: 'ReadyPlayerOne';
+}
+
+@font-face {
+  font-family: 'stardusterlaserital';
+  src: url('/fonts/stardusterlaserital.ttf') format('truetype');
+}
+.custom-font-2 {
+  font-family: 'stardusterlaserital';
+  font-weight: 100;
+}
+
+@font-face {
   font-family: 'wavehaus';
   src: url('/fonts/Wavehaus-66Book.ttf') format('truetype');
   font-display: auto;

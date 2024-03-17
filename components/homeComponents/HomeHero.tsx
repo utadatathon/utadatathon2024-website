@@ -22,8 +22,8 @@ export default function HomeHero() {
             style={{ minHeight: 480 }}
             className="relative max-w-4xl mx-auto lg:mt-[-6rem] flex flex-col justify-center items-center z-9 w-full"
           >
-            <h1 className="text-center md:text-8xl text-6xl font-bold text-primaryDark">
-              UTA Datathon 2024
+            <h1 className="text-center md:text-8xl text-5xl font-bold text-primaryDark custom-font">
+              UTA Datathon <span className="custom-font-2">2024</span>
             </h1>{" "}
             {/* !change */}
             <p className="text-center my-4 font-semibold md:text-xl text-md text-primaryDark opacity-80">
