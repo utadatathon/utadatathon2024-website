@@ -1,26 +1,26 @@
-import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function HomeFooter() {
   return (
-    <section className=" mt-16 px-6 py-8 md:text-base text-xs">
+    <section className="px-6 py-8 md:text-base text-xs">
       <hr className="my-4 bg-complementary" />
-      <div className="flex flex-col items-center justify-center gap-2 text-complementary text-center">
-        <div className="text-base md:text-lg">
-          {' '}
-          &copy; UTA Datathon 2024
+      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-2 lg:gap-32 lg:w-4/5 mx-auto text-complementary lg:text-left text-center lg:p-6  p-2">
+        <div className="lg:w-1/2 lg:ml-4">
+          <div className="text-base md:text-lg">
+            {' '}
+            &copy; UTA Datathon 2024
+          </div>
+          <div className="text-[0.6rem] md:text-sm">
+            Designed by <p className="font-black inline">UTA Datathon Development Team</p> <br />
+            {/* PLEASE DO NOT CHANGE <3 */}
+            HackPortal developed with &lt;3 by <p className="font-black inline">HackUTD</p> and{' '}
+            <p className="font-black inline">ACM Development</p>
+            {/* PLEASE DO NOT CHANGE <3 */}
+          </div>
         </div>
-        <div className="text-[0.6rem] md:text-sm">
-          Designed by <p className="font-black inline">UTA Datathon Development Team | </p>
-          {/* PLEASE DO NOT CHANGE <3 */}
-          HackPortal developed with &lt;3 by <p className="font-black inline">HackUTD</p> and{' '}
-          <p className="font-black inline">ACM Development</p>
-          {/* PLEASE DO NOT CHANGE <3 */}
-        </div>
-
         
-        <div className="flex flex-row justify-center items-center space-x-6">
+        <div className=" lg:w-1/2 lg:ml-16 flex flex-col items-right space-y-1">
           <a
             href="https://catalog.uta.edu/academicregulations/dishonesty/"
             target="_blank"
@@ -54,32 +54,35 @@ export default function HomeFooter() {
             Discord Community Guidelines
           </a>
           <a
-            href="datathon@uta.edu"
+            href="mailto:datathon@uta.edu"
             rel="noopener noreferrer"
             target="_blank"
-            className="hover:underline md:mr-8"
+            className="hover:underline md:mr-8 lg:mb-4"
           >
             Contact Us
           </a>
-          
-          
+
+          {/* Social icons */} {/* !change */}
+          <div className="space-x-8 > * + *">
+            {/* <a href="" rel="noopener noreferrer" target="_blank">
+              {/* <TwitterIcon className="footerIcon" /> */}
+            {/* </a> */} 
+            <a
+              href="https://www.instagram.com/utadatathon/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <InstagramIcon className="footerIcon" />
+            </a>
+            <a href="https://github.com/utadatathon" rel="noopener noreferrer" target="_blank">
+              <GitHubIcon className="footerIcon"/>
+            </a>
+          </div>
         </div>
-        {/* Social icons */} {/* !change */}
-        <div className="space-x-8 > * + *">
-          <a href="" rel="noopener noreferrer" target="_blank">
-            <TwitterIcon className="footerIcon" />
-          </a>
-          <a
-            href="https://www.instagram.com/utadatathon/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <InstagramIcon className="footerIcon" />
-          </a>
-          <a href="" rel="noopener noreferrer" target="_blank">
-            <FacebookIcon className="footerIcon" />
-          </a>
-        </div>
+
+
+
+        
       </div>
     </section>
   );
