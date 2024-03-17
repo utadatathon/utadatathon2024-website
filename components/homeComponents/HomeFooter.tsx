@@ -20,7 +20,7 @@ export default function HomeFooter() {
           </div>
         </div>
         
-        <div className=" lg:w-1/2 lg:ml-16 flex flex-col items-right space-y-1">
+        <div className=" lg:w-1/2 lg:ml-16 flex flex-col items-right">
           <a
             href="https://catalog.uta.edu/academicregulations/dishonesty/"
             target="_blank"
@@ -57,7 +57,7 @@ export default function HomeFooter() {
             href="mailto:datathon@uta.edu"
             rel="noopener noreferrer"
             target="_blank"
-            className="hover:underline md:mr-8 lg:mb-4"
+            className="hover:underline md:mr-8 mb-2"
           >
             Contact Us
           </a>
@@ -71,11 +71,12 @@ export default function HomeFooter() {
               href="https://www.instagram.com/utadatathon/"
               rel="noopener noreferrer"
               target="_blank"
+              className="inline-block"
             >
-              <InstagramIcon className="footerIcon" />
+              <InstagramIcon className="footerIcon " style={{ height: '1rem', width: '1rem' }}/>
             </a>
             <a href="https://github.com/utadatathon" rel="noopener noreferrer" target="_blank">
-              <GitHubIcon className="footerIcon"/>
+              <GitHubIcon className="footerIcon" style={{ height: '1rem', width: '1rem' }}/>
             </a>
           </div>
         </div>
