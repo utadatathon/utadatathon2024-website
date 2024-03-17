@@ -48,39 +48,42 @@ export default function HomeHero() {
   });
 
   return (
-    <section className="relative min-h-screen p-4 bg-contain bg-black">
+<section className="relative min-h-screen p-4 bg-cover bg-custom-image">
       {/* Video Background */}
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/videos/bg.mp4" type="video/mp4" />
-        {/* Add additional source elements for other video formats if needed */}
-      </video>
+      
+      {/* <video */}
+        {/* autoPlay */}
+        {/* loop */}
+        {/* muted */}
 
-      <div style={{ maxHeight: 920 }} className="relative max-w-4xl mx-auto flex flex-wrap justify-center items-center z-9">
+        {/* className="absolute inset-0 w-full h-screen object-cover" */}
+        {/*  */}
+      {/* > */}
+        {/* <source src="/videos/bg.mp4" type="video/mp4" /> */}
+        Add additional source elements for other video formats if needed
+      {/* </video> */}
+
+      <div  className="relative max-w-4xl mx-auto flex flex-wrap justify-center items-center z-9">
         <div className="relative w-full flex justify-center items-center">
           <Image
             src="/assets/my_first_vr_photo.png"
             alt="VR Image"
-            width={1240}
+            width={1440}
             height={830}
             onLoadingComplete={() => setShowText(false)}
           />
           {showText && (
             <>
-              <p className="typewriter">&nbsp;&nbsp;UTA DATATHON</p>
-              <p className="typewriter2">&nbsp;&nbsp;&nbsp;2024</p>
+              <p className="typewriter">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UTA DATATHON</p>
+              <p className="typewriter2" style={{marginLeft:"46%"}}>2024</p>
             </>
           )}
         </div>
       </div>
       {/* Countdown Timer */}
-      <div className="countdown-timer text-primaryDark" style={{ textAlign: 'center', margin: '40px 0' }}>
-  <h2 className="h1-custom-font">Countdown to the Datathon</h2>
-  <div className="time-left text-primaryDark " style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop:'20px', flexWrap: 'wrap' }}>
+      <div className="countdown-timer text-primaryDark" style={{ textAlign: 'center', margin: '100px 0' }}>
+          <h2 className="h1-custom-font">Countdown to the Datathon</h2>
+  <div className="time-left text-primaryDark " style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop:'50px', flexWrap: 'wrap' }}>
     {Object.keys(timeLeft).map((interval) => (
       <div key={interval} className="countdown-box">
         <span className="countdown-number">{timeLeft[interval]}</span>
@@ -89,8 +92,8 @@ export default function HomeHero() {
     ))}
   </div>
 </div>
-      <div className="flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-5 space-y-3">
-        {buttonDatas.map((button) => (
+<div className="flex flex-col items-center md:flex-row md:justify-around px-24">
+          {buttonDatas.map((button) => (
           <button
             key={button.text}
             onClick={() => router.push(button.path)}

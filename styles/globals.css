@@ -248,33 +248,38 @@ a.link {
   50% { border-color: black; }
 }
 
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-5%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .typewriter {
   font-family: 'ReadyPlayer', monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typewriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typewriter 3.5s steps(40, end),
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+    slideInFromLeft 3.5s ease-out,
     blinkCursor .75s step-end infinite;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 0;
+  transform: translateX(0);
   font-size: 48px;
-  color: #87CEEB;
+  color: #7b81ff;
   text-align: center;
-  /* Fluorescent glow effect */
   text-shadow:
-    0 0 5px #87CEEB,
-    0 0 10px #87CEEB,
-    /* 0 0 20px #00FFFF,  */
-    /* 0 0 30px #00FFFF, */
-    /* 0 0 40px #00FFFF,  */
-    /* 0 0 50px #00FFFF,  */
-    0 0 75px #0070FA; 
+    0 0 5px #7b81ff,
+    0 0 10px #7b81ff,
+    0 0 75px #7b81ff;
 }
+
 
 @keyframes typewriter2 {
   from { width: 0; }
@@ -286,33 +291,47 @@ a.link {
   50% { border-color: black; }
 }
 
+@keyframes slideInFromLeft2 {
+  from {
+    transform: translateX(-45%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.bg-custom-image {
+  background-image: url('/assets/background_image.png');
+  background-size: contain; /* Keeps the image's aspect ratio */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the background image */
+  background-color: black; /* Keeps the background color black where the image doesn't cover */
+}
+
+
 .typewriter2 {
   font-family: 'Roboto';
   overflow: hidden;
   border-right: .15em solid orange;
   white-space: nowrap;
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  margin: 0 auto;
   letter-spacing: .15em;
-  animation: 
-    typewriter2 12s steps(40, end),
+  animation:
+    slideInFromLeft2 3.5s ease-out,
     blinkCursor2 .75s step-end infinite;
   position: absolute;
-  top: 60%; /* Adjust based on the exact positioning you want */
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 0;
+  transform: translateX(0);
   font-size: 36px;
-  color: #87CEEB;
+  color: #7b81ff;
   text-align: center;
-  /* Fluorescent glow effect */
   text-shadow:
-    0 0 5px #87CEEB,
-    0 0 10px #87CEEB,
-    /* 0 0 20px #00FFFF,  */
-    /* 0 0 30px #00FFFF, */
-    /* 0 0 40px #00FFFF,  */
-    /* 0 0 50px #00FFFF,  */
-    0 0 75px #0070FA; 
+    0 0 5px #7b81ff,
+    0 0 10px #7b81ff,
+    0 0 75px #7b81ff;
 }
+
 
 /* Add to your CSS file */
 .countdown-box {
