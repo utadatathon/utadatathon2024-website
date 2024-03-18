@@ -40,7 +40,7 @@ export default function AnsweredQuestion({
         {({ open }) => (
           <div className="w-full">
             <div className="flex flex-row items-center gap-x-2">
-              <CheckCircleFilled style={{ color: iconColorCode }} />
+              {/* <CheckCircleFilled style={{ color: iconColorCode }} /> */}
               <Disclosure.Button className="w-full" as="div">
                 <button
                   className="w-full"

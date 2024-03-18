@@ -59,7 +59,7 @@ export default function ProfilePage() {
   };
 
   if (!isSignedIn) {
-    return <div className="p-4 flex-grow text-center">Sign in to see your Profile!</div>;
+    return <div className="p-4 flex-grow text-center text-white p-6">Sign in to see your Profile!</div>;
   }
 
   if (!hasProfile) {
