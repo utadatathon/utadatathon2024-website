@@ -11,7 +11,7 @@ const withPWA = require('next-pwa')({
   reactStrictMode: true,
   images: {
     domains: ['lh3.googleusercontent.com', 'firebasestorage.googleapis.com'],
-    loader: 'default',
+    unoptimized: true,
   },
 
   webpack(config, options) {
