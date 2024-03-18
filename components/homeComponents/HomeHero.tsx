@@ -54,23 +54,23 @@ export default function HomeHero() {
         <div className="flex flex-col justify-center items-center w-full">
           <div
             style={{ minHeight: 480 }}
-            className="relative max-w-4xl mx-auto lg:mt-[-6rem] flex flex-col justify-center items-center z-9 w-full"
+            className="relative max-w-4xl mx-auto lg:mt-[0rem] flex flex-col justify-center items-center z-9 w-full"
           >
             <h1 className="text-center md:text-8xl text-5xl font-bold text-primaryDark custom-font">
               UTA Datathon <span className="custom-font-2">2024</span>
             </h1>{" "}
             {/* !change */}
-            <p className="text-center my-4 font-semibold md:text-xl text-md text-primaryDark opacity-80">
+            {/* <p className="text-center my-4 font-semibold md:text-xl text-md text-primaryDark opacity-80">
               {" "}
-              {/* !change */}Powered by UTA Libraries
-            </p>
+              // {/* !change */}
+            {/* </p> */} 
 
           {/* Countdown Timer */}
-          <div className="countdown-timer text-primaryDark" style={{ textAlign: 'center', margin: '100px 0' }}>
+          <div className="countdown-timer text-primaryDark" style={{ textAlign: 'center', margin: '1rem 0' }}>
             <h2 className="custom-font">Countdown to the Datathon</h2>
-            <div className="time-left text-primaryDark" style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop:'50px', flexWrap: 'wrap' }}>
+            <div className="time-left text-primaryDark" style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop:'1rem', flexWrap: 'wrap' }}>
               {Object.keys(timeLeft).map((interval) => (
-                <div key={interval} className="countdown-box" style={{ background: '#A9A9A9', padding: '10px', borderRadius: '8px' }}>
+                <div key={interval} className="countdown-box backdrop-blur-sm bg-customBackground/30 border-2 border-gray-300 rounded-xl min-w-28" style={{ padding: '10px' }}>
                   <span className="countdown-number">{timeLeft[interval]}</span>
                  <p className="countdown-label custom-font">{interval.toUpperCase()}</p>
                 </div>
@@ -90,21 +90,21 @@ export default function HomeHero() {
             {/* Button 1 */}
             <button
               onClick={() => router.push('/apply')}
-              className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300"
+              className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300 custom-font"
             >
               Apply
             </button>
             {/* Button 2 */}
             <button
               onClick={() => router.push('/discord')}
-              className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300"
+              className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300 custom-font"
             >
               Discord
             </button>
             {/* Button 3 */}
             <button
               onClick={() => router.push('/devpost')}
-              className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300"
+              className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300 custom-font"
             >
               Dev Post
             </button>
