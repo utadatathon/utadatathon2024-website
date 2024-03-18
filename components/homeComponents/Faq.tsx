@@ -45,7 +45,7 @@ export default function FaqPage({ fetchedFaqs }: { fetchedFaqs: AnsweredQuestion
   }
 
   return (
-    <div className="flex flex-col flex-grow">
+    <div className="flex flex-col flex-grow mt-8">
       <Head>
         <title>UTA Datathon</title>
         <meta name="description" content="Frequently Asked Questions" />
