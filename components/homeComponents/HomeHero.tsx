@@ -70,8 +70,8 @@ export default function HomeHero() {
             <h2 className="custom-font">Countdown to the Datathon</h2>
             <div className="time-left text-primaryDark" style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop:'1rem', flexWrap: 'wrap' }}>
               {Object.keys(timeLeft).map((interval) => (
-                <div key={interval} className="countdown-box backdrop-blur-sm bg-customBackground/30 border-2 border-gray-300 rounded-xl min-w-28" style={{ padding: '10px' }}>
-                  <span className="countdown-number">{timeLeft[interval]}</span>
+                <div key={interval} className="countdown-box backdrop-blur-sm bg-customBackground/30 border-2 border-gray-300 rounded-xl min-w-28 custom-font-2" style={{ padding: '10px' }}>
+                  <span className="countdown-number text-xl">{timeLeft[interval]}</span>
                  <p className="countdown-label custom-font">{interval.toUpperCase()}</p>
                 </div>
               ))}
