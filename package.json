@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "export": "next export",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
