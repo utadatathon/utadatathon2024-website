@@ -1,8 +1,42 @@
 import { useRouter } from "next/router";
-import { buttonDatas } from "../../lib/data";
+import { useState, useEffect } from 'react';
 
 export default function HomeHero() {
   const router = useRouter();
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const difference = +new Date('04/10/2024') - +new Date();
+      if (difference > 0) {
+        return {
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        };
+      } else {
+        return {
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0
+        };
+      }
+    };
+
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    // Clear the interval when the component unmounts
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section className="relative min-h-screen p-4 bg-contain bg-customBackground mt-[-5rem]">
@@ -30,20 +64,50 @@ export default function HomeHero() {
               {" "}
               {/* !change */}Powered by UTA Libraries
             </p>
+
+          {/* Countdown Timer */}
+          <div className="countdown-timer text-primaryDark" style={{ textAlign: 'center', margin: '100px 0' }}>
+            <h2 className="custom-font">Countdown to the Datathon</h2>
+            <div className="time-left text-primaryDark" style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop:'50px', flexWrap: 'wrap' }}>
+              {Object.keys(timeLeft).map((interval) => (
+                <div key={interval} className="countdown-box" style={{ background: '#A9A9A9', padding: '10px', borderRadius: '8px' }}>
+                  <span className="countdown-number">{timeLeft[interval]}</span>
+                 <p className="countdown-label custom-font">{interval.toUpperCase()}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* TODO: Programmatically show these based on configured times/organizer preference */}
 
+
+
+
+
+          </div>
+
+          {/* Buttons */}
           <div className="relative flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-0 space-y-3 z-9 w-full">
-            {buttonDatas.map((button) => (
-              <button
-                key={button.text}
-                onClick={() => router.push(button.path)}
-                className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300"
-              >
-                {button.text}
-              </button>
-            ))}
+            {/* Button 1 */}
+            <button
+              onClick={() => router.push('/apply')}
+              className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300"
+            >
+              Apply
+            </button>
+            {/* Button 2 */}
+            <button
+              onClick={() => router.push('/discord')}
+              className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300"
+            >
+              Discord
+            </button>
+            {/* Button 3 */}
+            <button
+              onClick={() => router.push('/devpost')}
+              className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300"
+            >
+              Dev Post
+            </button>
           </div>
         </div>
       </div>
