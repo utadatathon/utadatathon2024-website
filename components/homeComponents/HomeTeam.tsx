@@ -24,7 +24,7 @@ export default function HomeTeam(props: { members: TeamMember[] }) {
             <h4 className="font-bold p-6 md:text-4xl text-2xl my-4 text-complementary text-center bg-white bg-clip-text text-transparent">
               Meet the Team
             </h4>{' '}
-            <div className="flex flex-wrap justify-center p-4">
+            <div className="flex flex-wrap justify-center lg:p-4">
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                 {/* Member Cards */}
                 {members.map(

@@ -82,7 +82,7 @@ export default function AppHeader() {
             <ul
               className={`${
                 showMenu ? 'translate-x-0' : '-translate-x-full'
-              } transform transition-all ease-out duration-300 flex w-6/12 h-screen flex-col bg-customBackground fixed top-0 left-0 z-[-1] mt-[80px] border-t-2 border-customBackground/10`}
+              } transform transition-all ease-out duration-300 flex w-6/12 h-screen flex-col backdrop-blur-sm bg-customBackground/70 fixed top-0 left-0 z-[-1] mt-[80px] border-t-2 border-customBackground/10`}
             >
               {dynamicNavItems
                 .filter(({ text }) => text !== 'Home')
