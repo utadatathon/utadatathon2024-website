@@ -248,7 +248,7 @@ export default function AuthPage() {
                   <div className="flex justify-center mt-6 mb-4">
                     <button
                       type="button"
-                      className="rounded-full text-base w-full text-white bg-primaryDark hover:brightness-90 px-4 py-2"
+                      className="rounded-full text-base w-full text-white bg-indigo-800 hover:brightness-90 px-4 py-2"
                       onClick={() => {
                         sendResetEmail();
                         setErrorMsg('');
