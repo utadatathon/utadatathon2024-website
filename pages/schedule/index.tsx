@@ -246,10 +246,10 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
 
   return (
     <>
-      <div className="text-6xl font-black p-10 text-complementary ">Schedule</div>
+      <div className="text-3xl font-black p-10 text-complementary bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent">Schedule Coming Soon!</div>
       <div className="flex flex-wrap lg:justify-between px-6 h-[75vh]">
         {/* Calendar */}
-        <div className="overflow-y-auto overflow-x-hidden lg:w-[62%] w-full h-full border-2 border-black rounded-md">
+        <div className="overflow-y-auto overflow-x-hidden lg:w-[62%] w-full h-full border-2 border-black rounded-3xl">
           <Paper>
             <div className="flex flex-row">
               <Scheduler data={props.scheduleCard}>
@@ -273,7 +273,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
         </div>
 
         {/* Event info card */}
-        <div className="overflow-y-auto flex flex-col justify-between lg:w-[36%] w-full h-full lg:my-0 my-2 border-2 border-black rounded-md bg-white p-8">
+        <div className="overflow-y-auto flex flex-col justify-between lg:w-[36%] w-full h-full lg:my-0 my-2 border-2 border-black rounded-3xl bg-gradient-to-b from-blue-800 via-indigo-900 to-stone-800 p-8 text-complementary">
           <section>
             {eventData.title === '' ? (
               <div className="text-2xl p-1">Click on an event for more info</div>
