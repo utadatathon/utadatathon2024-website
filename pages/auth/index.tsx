@@ -38,8 +38,14 @@ export default function AuthPage() {
         await updateUser(user);
       })
       .catch((error) => {
+        let errorMessage = 'An error occurred while signing in. Please try again.';
         const errorCode = error.code;
-        const errorMessage = error.message;
+        if (errorCode === 'auth/user-not-found') {
+          errorMessage = 'User not found. Please check your email and try again.';
+        } else if (errorCode === 'auth/wrong-password') {
+          errorMessage = 'Invalid password. Please check your password and try again.';
+        }
+        // const errorMessage = error.message;
         setErrorMsg(errorMessage);
       });
   };
@@ -199,7 +205,7 @@ export default function AuthPage() {
                       </div>
                     </form>
                     {/* Error and verification messages */}
-                    <div className="text-center">{errorMsg}</div>
+                    <div className="text-center text-white">{errorMsg}</div>
                     {/* !change if needed */}
                     {/* Uncomment to allow resend verification email option (users could spam) */}
                     {/* {sendVerification && (
