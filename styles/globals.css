@@ -27,6 +27,14 @@ body {
   font-family: 'stardusterlaserital';
   font-weight: 100;
 }
+@font-face {
+  font-family: 'hemihead';
+  src: url('/fonts/hemi_head.otf') format('truetype');
+}
+.custom-font-3 {
+  font-family: 'hemihead';
+  font-weight: 100;
+}
 
 @font-face {
   font-family: 'wavehaus';
