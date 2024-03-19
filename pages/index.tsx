@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import { GetServerSideProps } from 'next';
 import { useEffect, useState } from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { RequestHelper } from '../lib/request-helper';
 import HomeHero from '../components/homeComponents/HomeHero';
 import HomeAbout from '../components/homeComponents/HomeAbout';
@@ -10,6 +12,7 @@ import HomeTeam from '../components/homeComponents/HomeTeam';
 import HomeSponsors from '../components/homeComponents/HomeSponsors';
 import HomeFooter from '../components/homeComponents/HomeFooter';
 import HomeFaq from '../components/homeComponents/HomeFaq';
+import MapComponent from '../components/homeComponents/MapComponent';
 
 /**
  * The home page.
@@ -54,6 +57,7 @@ export default function Home(props: {
       <HomeFaq answeredQuestion={props.answeredQuestion} />
       <HomeTeam members={props.fetchedMembers} />
       <HomeSponsors sponsorCard={props.sponsorCard} />
+      <MapComponent></MapComponent>
       <HomeFooter />
     </>
   );
