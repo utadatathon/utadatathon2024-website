@@ -13,7 +13,13 @@ export default function HomeTeam(props: { members: TeamMember[] }) {
     members.length !== 0 && (
       <section className="md:p-12 p-6 relative">
         {/* Video Background */}
-        <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover z-0">
+        <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline // Add playsInline attribute
+        controls={false} // Hide playback controls
+        className="absolute top-0 left-0 w-full h-full object-cover z-0">
           <source src="/videos/bg2.mp4" type="video/mp4" />
           {/* Add additional source elements for other video formats if needed */}
         </video>
