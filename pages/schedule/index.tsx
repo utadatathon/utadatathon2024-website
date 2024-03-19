@@ -246,7 +246,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
 
   return (
     <>
-      <div className="text-3xl font-black p-10 text-complementary bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent">Schedule Coming Soon!</div>
+      <div className="text-3xl font-black p-10 text-complementary bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent text-center">Schedule Coming Soon!</div>
       <div className="flex flex-wrap lg:justify-between px-6 h-[75vh]">
         {/* Calendar */}
         <div className="overflow-y-auto overflow-x-hidden lg:w-[62%] w-full h-full border-2 border-black rounded-3xl">
