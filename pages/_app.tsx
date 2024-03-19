@@ -45,8 +45,8 @@ function PortalApp({ Component, pageProps }: AppProps) {
                 (process.env.NODE_ENV !== 'development' && (
                   <link rel="manifest" href="/manifest.json" />
                 ))}
-              <link href="/logo-bg.PNG" rel="icon" type="image/png" sizes="16x16" />
-              <link href="/logo-bg.PNG" rel="icon" type="image/png" sizes="32x32" />
+              <link href="/logo-bg.png" rel="icon" type="image/png" sizes="16x16" />
+              <link href="/logo-bg.png" rel="icon" type="image/png" sizes="32x32" />
               <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
               <meta name="theme-color" content="#5D5FEF" />
             </Head>
