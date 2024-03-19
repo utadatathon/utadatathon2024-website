@@ -136,7 +136,7 @@ export default function AppHeader() {
           id="mlh-trust-badge"
           style={{
             display: 'block',
-            maxWidth: '100px',
+            maxWidth: '80px',
             minWidth: '60px',
             position: 'fixed',
             right: '50px',
@@ -146,6 +146,7 @@ export default function AppHeader() {
           }}
           href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white"
           target="_blank"
+          className='mr-[-2rem] lg:mr-[-1rem]'
         >
           <img
             src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg"
