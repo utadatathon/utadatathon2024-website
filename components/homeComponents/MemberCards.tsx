@@ -44,8 +44,8 @@ export default function MemberCards(props) {
       </div>
       {/* Main Body */}
 
-      <h1 className="text-sm font-black text-complementary text-center">{props.name}</h1>
-      <p className="text-xs text-complementary/50 font-semibold">{props.description}</p>
+      <h1 className="text-md font-black text-center opacity-80 bg-gradient-to-tl from-fuchsia-300 to-fuchsia-500 bg-clip-text text-transparent  ">{props.name}</h1>
+      <p className="text-xs font-semibold bg-gradient-to-r from-slate-300 to-slate-200 bg-clip-text text-transparent">{props.description}</p>
       <div className=" text-complementary flex justify-left space-x-2 > * + *">
         {props.github !== undefined && (
           <a href={props.github} target="_blank" rel="noreferrer">
