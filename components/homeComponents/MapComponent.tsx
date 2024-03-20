@@ -10,7 +10,6 @@ const venueLocation: Location = { lat: 32.73222908064623, lng: -97.1139552495913
 const parkingLocation: Location = { lat: 32.726286283936155, lng: -97.11284853890245 };
 
 const containerStyle = {
-  width: '450px',
   height: '400px',
   margin: 'auto'
 };
@@ -20,20 +19,7 @@ const center = {
   lng: (venueLocation.lng + parkingLocation.lng) / 2,
 };
 
-const buttonStyle : React.CSSProperties = {
-  padding: '10px 20px',
-  margin: '0 10px',
-  backgroundColor: 'transparent', // Transparent background
-  color: '#FFFFFF', // White text color
-  border: '2px solid #FFFFFF', // White border
-  borderRadius: '20px',
-  textTransform: 'uppercase',
-  fontWeight: 700,
-  fontSize: '16px',
-  cursor: 'pointer',
-  outline: 'none',
-  boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)', // Glowing effect
-};
+
 const MapComponent: React.FC = () => {
   // Define your URLs/paths here
   const googleMapsUrl = "https://maps.app.goo.gl/UcfGUJMsaU9eGTeX9";
@@ -42,11 +28,14 @@ const MapComponent: React.FC = () => {
 
   return (
     <>
+    <section className="relative p-4 bg-contain bg-customBackground">
+      <h1 className="md:text-4xl text-2xl font-bold my-4 text-center bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent p-12 custom-font">Venue <span className='custom-font-3'>&</span> Parking</h1>
       <LoadScript googleMapsApiKey="AIzaSyAc30LXBPnJC7NSYa7Ylz3KkVDdH2KIeQ0">
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={center}
           zoom={15}
+          mapContainerClassName='w-[24rem] lg:w-[28rem]'
         >
           <Marker // Venue marker
             position={venueLocation}
@@ -58,26 +47,27 @@ const MapComponent: React.FC = () => {
           />
         </GoogleMap>
       </LoadScript>
-      <div style={{ textAlign: 'center', marginTop: '20px' }}>
+      <div className="relative flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-0 space-y-14 lg:space-x-8 md:space-x-4 z-9 w-full mt-8 lg:mt-12">
         <button
-          style={buttonStyle}
           onClick={() => window.open(googleMapsUrl, "_blank")}
+          className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300 custom-font"
         >
           Google Maps
         </button>
         <button
-          style={buttonStyle}
           onClick={() => window.open(appleMapsUrl, "_blank")}
+          className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300 custom-font"
         >
           Apple Maps
         </button>
         <button
-          style={buttonStyle}
-          onClick={() => window.location.href = schoolMapUrl}
+          onClick={() => window.open(schoolMapUrl, "_blank")}
+          className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300 custom-font"
         >
           School Map
         </button>
       </div>
+      </section>
     </>
   );
 };
