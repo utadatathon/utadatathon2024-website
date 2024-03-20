@@ -24,7 +24,7 @@ export default function HomeSponsors(props: { sponsorCard: Sponsor[] }) {
 
         {/* Content Overlay */}
         <div className="flex flex-col flex-grow rounded-3xl px-10 py-4 mx-auto w-full sm:w-4/5 bg-white relative z-9">
-          <h4 className="text-complementary font-bold md:text-4xl text-2xl p-10 my-4 text-center bg-gradient-to-br from-violet-800 via-violet-500 to-violet-50 bg-clip-text text-transparent">Sponsors & Partners</h4>
+          <h4 className="text-complementary font-bold md:text-4xl text-2xl p-10 my-4 text-center bg-gradient-to-br from-violet-800 via-violet-500 to-violet-50 bg-clip-text text-transparent custom-font">Sponsors <span className="custom-font-3">&</span> Partners</h4>
           
           {/* Sponsor Card */}
           <section className="flex flex-wrap justify-center p-4">

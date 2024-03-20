@@ -53,7 +53,7 @@ export default function FaqPage({ fetchedFaqs }: { fetchedFaqs: AnsweredQuestion
       {/* <AboutHeader active="/about/faq" /> */}
       <div className="top-6">
         <div className="py-2 w-full max-w-3xl mx-auto text-center">
-          <h4 className="font-bold md:text-4xl text-2xl my-4 text-complementary bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent">Frequently Asked Questions</h4>
+          <h4 className="font-bold md:text-4xl text-2xl my-4 text-complementary bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent custom-font">Frequently Asked Questions</h4>
           <div className="flex flex-row items-center gap-x-2">
             <button
               onClick={() => {
