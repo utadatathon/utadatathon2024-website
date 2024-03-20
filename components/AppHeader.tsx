@@ -77,7 +77,7 @@ export default function AppHeader() {
       <header className="top-0 fixed justify-between flex flex-row w-full backdrop-blur-sm bg-customBackground/30 items-center h-20 z-10 lg:px-4 px-2 drop-shadow">
         <div className="flex flex-row order-1 md:order-none items-center">
           {/* Smartphone nav */}
-          <div onClick={toggleMenu} className="md:hidden cursor-pointer text-white">
+          <div onClick={toggleMenu} className="md:hidden cursor-pointer text-white custom-font tracking-wider">
             {mobileIcon ? <MenuIcon /> : <CloseIcon />}
             <ul
               className={`${
@@ -107,7 +107,7 @@ export default function AppHeader() {
         </div>
 
         {/* PC nav */}
-        <div className="hidden order-2 md:flex items-center md:text-center lg:ml-12 text-complementary space-x-6 lg:space-x-12 h-full">
+        <div className="hidden order-2 md:flex items-center md:text-center lg:ml-12 text-complementary space-x-6 lg:space-x-12 h-full custom-font tracking-wider">
           {dynamicNavItems.map((item) => (
             <NavLink
               key={item.text}
@@ -124,7 +124,7 @@ export default function AppHeader() {
         </div>
         <div className="flex flex-row justify-center items-center order-2 md:order-3">
           <button
-            className="font-header font-bold bg-gradient-to-br from-purple-900 to-indigo-600 rounded-full text-primaryDark text-sm xl:px-10 md:px-6 px-10 py-1 hover:bg-primaryDark hover:text-secondary transition duration-300 ease-in-out"
+            className="font-header font-bold bg-gradient-to-br from-purple-900 to-indigo-600 rounded-full text-primaryDark text-sm xl:px-10 md:px-6 px-10 py-1 hover:bg-primaryDark hover:text-secondary transition duration-300 ease-in-out custom-font tracking-wider"
             onClick={toggleDialog}
           >
             {!user || !isSignedIn ? 'Sign in' : hasProfile ? 'Profile' : 'Register'}

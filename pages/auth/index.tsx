@@ -137,7 +137,7 @@ export default function AuthPage() {
             >
               {!passwordResetDialog ? (
                 <>
-                  <h1 className="md:text-3xl text-2xl font-black text-center text-primaryDark mt-4">
+                  <h1 className="md:text-3xl text-2xl font-black text-center text-primaryDark mt-4 custom-font tracking-wider">
                     {signInOption ? 'Sign in' : 'Create an account'}
                   </h1>
                   <div className="text-center text-complementary/60 mt-4 mb-12">

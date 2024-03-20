@@ -199,7 +199,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
       </section>
       <section
         id="jumbotron"
-        className="text-primaryDark lg:text-4xl sm:text-3xl text-2xl font-bold text-center lg:mt-0 mt-6 mb-6 p-8  bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent"
+        className="text-primaryDark lg:text-4xl sm:text-3xl text-2xl font-bold text-center lg:mt-0 mt-6 mb-6 p-8  bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent custom-font tracking-wide"
       >
         UTA Datathon 2024 Registration
       </section>
