@@ -54,10 +54,10 @@ export default function Home(props: {
       <HomeAbout />
       <HomeSpeakers keynoteSpeakers={props.keynoteSpeakers} />
       {/* <HomeChallenges challenges={props.challenges} /> hiding this section */}
+      <MapComponent />
       <HomeFaq answeredQuestion={props.answeredQuestion} />
       <HomeTeam members={props.fetchedMembers} />
       <HomeSponsors sponsorCard={props.sponsorCard} />
-      <MapComponent></MapComponent>
       <HomeFooter />
     </>
   );

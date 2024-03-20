@@ -29,8 +29,8 @@ const MapComponent: React.FC = () => {
 
   return (
    
- <section className="relative p-4 bg-contain bg-customBackground">
-      <h1 className="md:text-4xl text-2xl font-bold my-4 text-center bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent p-12 custom-font">Venue & Parking</h1>
+ <section className="relative p-4 bg-contain bg-customBackground my-12">
+      <h1 className="md:text-4xl text-2xl font-bold my-4 text-center bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent p-12 custom-font">Venue <span className='custom-font-3'>& </span>   Parking</h1>
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
         <iframe 
           src={mapUrl} 
