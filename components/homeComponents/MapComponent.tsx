@@ -21,32 +21,25 @@ const center = {
 
 
 const MapComponent: React.FC = () => {
-  // Define your URLs/paths here
+
   const googleMapsUrl = "https://maps.app.goo.gl/UcfGUJMsaU9eGTeX9";
   const appleMapsUrl = "https://maps.apple.com/?address=416%20S%20Yates%20St,%20Arlington,%20TX%2076010,%20United%20States&auid=6248132129360210769&ll=32.732660,-97.113931&lsp=9902&q=Nedderman%20Hall&t=m";
   const schoolMapUrl = "https://www.uta.edu/maps"; 
+  const mapUrl = "https://www.google.com/maps/d/u/0/embed?mid=1x_0MkSve-qp3Nx1fvwAgJWTNn2zRk6M";
 
   return (
-    <>
-    <section className="relative p-4 bg-contain bg-customBackground">
-      <h1 className="md:text-4xl text-2xl font-bold my-4 text-center bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent p-12 custom-font">Venue <span className='custom-font-3'>&</span> Parking</h1>
-      <LoadScript googleMapsApiKey="AIzaSyAc30LXBPnJC7NSYa7Ylz3KkVDdH2KIeQ0">
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={center}
-          zoom={15}
-          mapContainerClassName='w-[24rem] lg:w-[28rem]'
-        >
-          <Marker // Venue marker
-            position={venueLocation}
-            label="Venue"
-          />
-          <Marker // Parking marker
-            position={parkingLocation}
-            label="Parking"
-          />
-        </GoogleMap>
-      </LoadScript>
+   
+ <section className="relative p-4 bg-contain bg-customBackground">
+      <h1 className="md:text-4xl text-2xl font-bold my-4 text-center bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent p-12 custom-font">Venue & Parking</h1>
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
+        <iframe 
+          src={mapUrl} 
+          width="640" 
+          height="480" 
+          style={{ border: 'none' }} 
+          loading="lazy">
+        </iframe>
+      </div>
       <div className="relative flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-0 space-y-14 lg:space-x-8 md:space-x-4 z-9 w-full mt-8 lg:mt-12">
         <button
           onClick={() => window.open(googleMapsUrl, "_blank")}
@@ -67,8 +60,7 @@ const MapComponent: React.FC = () => {
           School Map
         </button>
       </div>
-      </section>
-    </>
+    </section>
   );
 };
 
