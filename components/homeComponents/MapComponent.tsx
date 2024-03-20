@@ -25,7 +25,7 @@ const MapComponent: React.FC = () => {
   const googleMapsUrl = "https://maps.app.goo.gl/UcfGUJMsaU9eGTeX9";
   const appleMapsUrl = "https://maps.apple.com/?address=416%20S%20Yates%20St,%20Arlington,%20TX%2076010,%20United%20States&auid=6248132129360210769&ll=32.732660,-97.113931&lsp=9902&q=Nedderman%20Hall&t=m";
   const schoolMapUrl = "https://www.uta.edu/maps"; 
-  const mapUrl = "https://www.google.com/maps/d/u/0/embed?mid=1x_0MkSve-qp3Nx1fvwAgJWTNn2zRk6M";
+  const mapUrl = "https://www.google.com/maps/d/u/0/embed?mid=1x_0MkSve-qp3Nx1fvwAgJWTNn2zRk6Mhttps://www.google.com/maps/d/u/6/edit?mid=1rX4t-fVz6vWX2fGGF-8TJIU9ULMm3f4&usp=sharing";
 
   return (
    
