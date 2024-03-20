@@ -30,7 +30,7 @@ export default function MemberCards(props) {
   }, []);
 
   return (
-    <div className="lg:w-52 w-40 mb-5 md:mx-3 mx-1 flex flex-col items-center justify-center">
+    <div className="lg:w-52 w-40 mb-5 md:mx-3 mx-1 flex flex-col items-center justify-center text-center">
       {/* Profile Image */}
       <div className="rounded-full">
         <Image

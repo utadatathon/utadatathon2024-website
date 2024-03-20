@@ -9,7 +9,7 @@ export default function HomeFooter() {
         <div className="lg:w-1/2 lg:ml-4">
           <div className="text-base md:text-lg">
             {' '}
-            &copy; UTA Datathon 2024
+            &copy; <span className='custom-font'>UTA Datathon 2024</span>
           </div><br />
           <div className="text-[0.6rem] md:text-sm">
             Designed by <p className="font-black inline">UTA Datathon Development Team</p> <br />

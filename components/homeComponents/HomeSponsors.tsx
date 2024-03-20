@@ -35,7 +35,7 @@ export default function HomeSponsors(props: { sponsorCard: Sponsor[] }) {
             </div>
           </section>
 
-          <h2 className="my-2 text-center">
+          <h2 className="my-2 text-center bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent">
             If you would like to sponsor UTA Datathon, please reach out to us at&nbsp;
             <a
               href="mailto:datathon@uta.edu"
