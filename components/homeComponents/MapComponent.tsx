@@ -6,6 +6,7 @@ interface Location {
   lng: number;
 }
 
+
 const venueLocation: Location = { lat: 32.73222908064623, lng: -97.11395524959133 }; 
 const parkingLocation: Location = { lat: 32.726286283936155, lng: -97.11284853890245 };
 
