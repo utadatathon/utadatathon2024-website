@@ -47,7 +47,7 @@ export default function HomeHero() {
         muted
         playsInline // Add playsInline attribute
         controls={false} // Hide playback controls
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover opacity-50"
       >
         <source src="/videos/bg.mp4" type="video/mp4" />
         {/* Add additional source elements for other video formats if needed */}
