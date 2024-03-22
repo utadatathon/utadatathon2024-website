@@ -1,4 +1,5 @@
 import schools from './public/schools.json';
+import countries from './public/countries.json';
 import majors from './public/majors.json';
 
 export const hackPortalConfig: HackPortalConfig = {
@@ -36,6 +37,7 @@ export const hackPortalConfig: HackPortalConfig = {
             required: true,
             initialValue: '',
           },
+          //phone number
           {
             question: 'Phone Number',
             id: 'phoneNumber',
@@ -147,6 +149,23 @@ export const hackPortalConfig: HackPortalConfig = {
           },
         ],
       },
+      {
+        // Country of residence
+        datalistQuestions: [
+          {
+            question: 'Country of Residence',
+            id: 'country',
+            name: 'country',
+            required: true,
+            initialValue: '',
+            datalist: 'countries', 
+            options: countries.map(({ country }) => ({
+              title: country,
+              value: country,
+            })),
+          }
+        ]
+      }
     ],
     //Question Topic
     schoolQuestions: [
