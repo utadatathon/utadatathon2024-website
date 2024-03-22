@@ -36,8 +36,16 @@ export const hackPortalConfig: HackPortalConfig = {
             required: true,
             initialValue: '',
           },
+          {
+            question: 'Phone Number',
+            id: 'phoneNumber',
+            name: 'phoneNumber',
+            required: true,
+            initialValue: '',
+          },
         ],
       },
+      
       {
         numberInputQuestions: [
           {

@@ -250,6 +250,11 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
               errors['allOptions'] = 'Please check all three boxes';
             }
 
+            // Validate phone number
+            if (values.phoneNumber && !/^\d{10}$/.test(values.phoneNumber)) {
+              errors.phoneNumber = 'Phone number must be 10 digits';
+            }
+
             return errors;
           }}
           onSubmit={async (values, { setSubmitting }) => {
