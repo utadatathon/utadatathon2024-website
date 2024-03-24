@@ -489,7 +489,7 @@ export const hackPortalConfig: HackPortalConfig = {
             id: 'mlhemails',
             name: 'mlhemails',
             required: false,
-            initialValue: ['NO'],
+            initialValue: [],
             options: [
               {
                 title: 'I authorize MLH to send me occasional emails about relevant events, career opportunities, and community announcements.',
