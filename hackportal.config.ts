@@ -1,4 +1,5 @@
 import schools from './public/schools.json';
+import countries from './public/countries.json';
 import majors from './public/majors.json';
 
 export const hackPortalConfig: HackPortalConfig = {
@@ -36,8 +37,17 @@ export const hackPortalConfig: HackPortalConfig = {
             required: true,
             initialValue: '',
           },
+          //phone number
+          {
+            question: 'Phone Number',
+            id: 'phoneNumber',
+            name: 'phoneNumber',
+            required: true,
+            initialValue: '',
+          },
         ],
       },
+      
       {
         numberInputQuestions: [
           {
@@ -139,6 +149,23 @@ export const hackPortalConfig: HackPortalConfig = {
           },
         ],
       },
+      {
+        // Country of residence
+        datalistQuestions: [
+          {
+            question: 'Country of Residence',
+            id: 'country',
+            name: 'country',
+            required: true,
+            initialValue: '',
+            datalist: 'countries', 
+            options: countries.map(({ country }) => ({
+              title: country,
+              value: country,
+            })),
+          }
+        ]
+      }
     ],
     //Question Topic
     schoolQuestions: [
@@ -432,6 +459,46 @@ export const hackPortalConfig: HackPortalConfig = {
               }
             ],
           },
+
+          // policies and agreements
+          {
+            question: 'Policies and Agreements',
+            id: 'allOptions',
+            name: 'allOptions',
+            required: true,
+            initialValue: [],
+            options: [
+              {
+                title: 'By submitting this form, you consent to participate in the event and agree to be photographed. This is a public event which will be photographed and recorded. If you would not like to be photographed please contact datathon@uta.edu.',
+                value: 'Photography Agreement',
+              },
+              {
+                title: 'I have read and agree to the MLH Code of Conduct.',
+                value: 'MLH Code of Conduct',
+              },
+              {
+                title: 'I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy. I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy.',
+                value: 'MLH Authorization',
+              },
+            ],
+          },
+
+          // optional recieving emails 
+          {
+            question: 'Recieving Emails',
+            id: 'mlhemails',
+            name: 'mlhemails',
+            required: false,
+            initialValue: ['NO'],
+            options: [
+              {
+                title: 'I authorize MLH to send me occasional emails about relevant events, career opportunities, and community announcements.',
+                value: 'Recieve MLH Emails',
+              },
+            ],
+          },
+          
+
         ],
       },
     ],

@@ -201,7 +201,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
         id="jumbotron"
         className="text-primaryDark lg:text-4xl sm:text-3xl text-2xl font-bold text-center lg:mt-0 mt-6 mb-6 p-8  bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent custom-font tracking-wide"
       >
-        UTA Datathon 2024 Registration
+        UTA Datathon Registration
       </section>
 
       <section className="relative">
@@ -243,6 +243,16 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
               values.hackathonExperience > 100
             ) {
               errors.hackathonExperience = 'Not a valid number';
+            }
+            // Custom validation for Policies and Agreements
+            const allOptions = values['allOptions'];
+            if (!allOptions.includes('Photography Agreement') || !allOptions.includes('MLH Code of Conduct') || !allOptions.includes('MLH Authorization')) {
+              errors['allOptions'] = 'Please check all three boxes';
+            }
+
+            // Validate phone number
+            if (values.phoneNumber && !/^\d{10}$/.test(values.phoneNumber)) {
+              errors.phoneNumber = 'Phone number must be 10 digits';
             }
 
             return errors;
@@ -363,6 +373,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
                       />
                     ))}
                   </div>
+
                   {/* Resume Upload */}
                   <div className=" mt-8 py-4">
                     Upload your Resume:
@@ -383,8 +394,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
                   
                   {/* Disclaimer */}
                   <div>
-                    <br />
-                    <p className="text-complementary/80">Photography Disclaimer: By submitting this form, you consent to participate in the event and agree to be photographed. This is a public event which will be photographed and recorded. If you would not like to be photographed please contact datathon@uta.edu.</p>
+                    
                   </div>
 
                   {/* Submit */}
