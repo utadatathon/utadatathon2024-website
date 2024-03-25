@@ -98,7 +98,7 @@ export default function AppHeader() {
           <Link href="/">
             <a className="flex gap-2 ml-[6px] font-display self-center items-center md:ml-0">
               {/* !change src */}
-              <Image src={'/logo.png'} width="65px" height="55px" />
+              <Image src={'/logo.png'} width="65px" height="55px" alt='User Image'/>
               <span className="text-lg font-black md:z-0 md:text-3xl text-primaryDark">
                 
               </span>

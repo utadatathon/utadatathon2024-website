@@ -45,8 +45,8 @@ export default function HomeHero() {
         autoPlay
         loop
         muted
-        playsInline // Add playsInline attribute
-        controls={false} // Hide playback controls
+        playsInline 
+        controls={false}
         className="absolute inset-0 w-full h-full object-cover opacity-50"
       >
         <source src="/videos/bg.mp4" type="video/mp4" />
@@ -61,11 +61,6 @@ export default function HomeHero() {
             <h1 className="text-center md:text-8xl text-5xl font-bold text-primaryDark custom-font">
               UTA Datathon <span className="custom-font-2">2024</span>
             </h1>{" "}
-            {/* !change */}
-            {/* <p className="text-center my-4 font-semibold md:text-xl text-md text-primaryDark opacity-80">
-              {" "}
-              // {/* !change */}
-            {/* </p> */} 
 
           {/* Countdown Timer */}
           <div className="countdown-timer text-primaryDark" style={{ textAlign: 'center', margin: '1rem 0' }}>
