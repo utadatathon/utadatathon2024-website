@@ -17,7 +17,7 @@ export default function HomeAbout() {
           !
           <br />
           <br />
-          <span className="text-bold bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent">Successful projects will have the opportunity to submit their work as a publication through the UTA MAV Matrix.</span>
+          <span className="text-bold bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent">Successful projects will have the opportunity to submit their work as a publication through the UTA online repository.</span>
         </div>
       </div>
     </section>
