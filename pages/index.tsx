@@ -47,7 +47,7 @@ export default function Home(props: {
       <Head>
         <title>UTA Datathon</title> 
         <meta name="description" content="UTA Datathon 2024" /> 
-        <link rel="icon" href="/logo-bg.png" />
+        <link rel="icon" href="/logo-bg.png" type="image/png" />
       </Head>
 
       <HomeHero />
