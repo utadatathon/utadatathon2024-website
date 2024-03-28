@@ -36,6 +36,7 @@ const styles = ({ palette }: Theme) =>
     appointment: {
       borderRadius: 0,
       borderBottom: 0,
+      backgroundColor: 'rgb(85 42 164)',
     },
 
     EventTypeAppointment: {
@@ -146,14 +147,17 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
     ({ onClick, classes, data, ...restProps }: AppointmentProps) => (
       <Appointments.Appointment
         {...restProps}
-        className={classNames({
-          [classes.EventTypeAppointment]: data.Event === 1,
-          [classes.SponsorTypeAppointment]: data.Event === 2,
-          [classes.TechTalkTypeAppointment]: data.Event === 3,
-          [classes.WorkshopTypeAppointment]: data.Event === 4,
-          [classes.SocialTypeAppointment]: data.Event === 5,
-          [classes.appointment]: true,
-        })}
+        style={{ backgroundColor: 'rgb(86 40 159)' }}
+        className={classNames(
+          {
+            [classes.EventTypeAppointment]: data.Event === 1,
+            [classes.SponsorTypeAppointment]: data.Event === 2,
+            [classes.TechTalkTypeAppointment]: data.Event === 3,
+            [classes.WorkshopTypeAppointment]: data.Event === 4,
+            [classes.SocialTypeAppointment]: data.Event === 5,
+            [classes.appointment]: true,
+          }
+        )}
         data={data}
         onClick={() => changeEventData(data)}
       />
@@ -232,7 +236,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
   const resources = [
     {
       fieldName: 'track',
-      title: 'track',
+      title: 'Events',
       instances: Array.from(
         new Set(
           Array.from(uniqueTracks).map((track) => ({
