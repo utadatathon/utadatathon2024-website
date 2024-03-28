@@ -36,6 +36,7 @@ const styles = ({ palette }: Theme) =>
     appointment: {
       borderRadius: 0,
       borderBottom: 0,
+      backgroundColor: 'indigo',
     },
 
     EventTypeAppointment: {
@@ -115,7 +116,7 @@ const AppointmentContent = withStyles(styles, { name: 'AppointmentContent' })(
 
     return (
       <Appointments.AppointmentContent {...restProps} data={data}>
-        <div className={classes.container}>
+        <div className={(classes.container)}>
           <div className={classes.text}>{data.title}</div>
           <div className={classNames(classes.text, classes.content)}>{`Type: ${Event}`}</div>
           <div className={classNames(classes.text, classes.content)}>
@@ -146,14 +147,17 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
     ({ onClick, classes, data, ...restProps }: AppointmentProps) => (
       <Appointments.Appointment
         {...restProps}
-        className={classNames({
-          [classes.EventTypeAppointment]: data.Event === 1,
-          [classes.SponsorTypeAppointment]: data.Event === 2,
-          [classes.TechTalkTypeAppointment]: data.Event === 3,
-          [classes.WorkshopTypeAppointment]: data.Event === 4,
-          [classes.SocialTypeAppointment]: data.Event === 5,
-          [classes.appointment]: true,
-        })}
+        style={{ backgroundColor: 'rgb(86 40 159)' }}
+        className={classNames(
+          {
+            [classes.EventTypeAppointment]: data.Event === 1,
+            [classes.SponsorTypeAppointment]: data.Event === 2,
+            [classes.TechTalkTypeAppointment]: data.Event === 3,
+            [classes.WorkshopTypeAppointment]: data.Event === 4,
+            [classes.SocialTypeAppointment]: data.Event === 5,
+            [classes.appointment]: true,
+          }
+        )}
         data={data}
         onClick={() => changeEventData(data)}
       />
@@ -232,7 +236,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
   const resources = [
     {
       fieldName: 'track',
-      title: 'track',
+      title: 'Events',
       instances: Array.from(
         new Set(
           Array.from(uniqueTracks).map((track) => ({
@@ -309,11 +313,11 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
                   <p>{eventData.time}</p>
                 </div>
                 <div className="">
-                  <p className="flex items-center font-semibold">
+                  {/* <p className="flex items-center font-semibold">
                     {<Backpack style={{ fontSize: 'medium', margin: '2px' }} />}
                     Page
                   </p>
-                  <p>{eventData.page}</p>
+                  <p>{eventData.page}</p> */}
                 </div>
               </div>
 
