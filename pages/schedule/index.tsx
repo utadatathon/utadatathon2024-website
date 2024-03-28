@@ -39,34 +39,34 @@ const styles = ({ palette }: Theme) =>
     },
 
     EventTypeAppointment: {
-      border: `2px solid ${red[500]}`,
+      // border: `2px solid ${red[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      boxShadow: ` 0 0 16px 1px ${red[400]} `,
+      // boxShadow: ` 0 0 16px 1px ${red[400]} `,
     },
     SponsorTypeAppointment: {
-      border: `2px solid ${orange[500]}`,
+      // border: `2px solid ${orange[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      boxShadow: ` 0 0 16px 4px ${orange[500]} `,
+      // boxShadow: ` 0 0 16px 4px ${orange[500]} `,
     },
     TechTalkTypeAppointment: {
-      border: `2px solid ${indigo[500]}`,
+      // border: `2px solid ${indigo[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      boxShadow: ` 0 0 16px 4px ${indigo[500]} `,
+      // boxShadow: ` 0 0 16px 4px ${indigo[500]} `,
     },
     WorkshopTypeAppointment: {
-      border: `2px solid ${purple[500]}`,
+      // border: `2px solid ${purple[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      boxShadow: ` 0 0 16px 4px ${purple[500]} `,
+      // boxShadow: ` 0 0 16px 4px ${purple[500]} `,
     },
     SocialTypeAppointment: {
-      border: `2px solid ${blue[500]}`,
+      // border: `2px solid ${blue[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      boxShadow: ` 0 0 16px 4px ${blue[500]} `,
+      // boxShadow: ` 0 0 16px 4px ${blue[500]} `,
     },
     weekEndCell: {
       backgroundColor: alpha(palette.action.disabledBackground, 0.04),
@@ -87,6 +87,7 @@ const styles = ({ palette }: Theme) =>
     },
     content: {
       opacity: 0.7,
+      paddingTop: '1px',
     },
     container: {
       width: '100%',
@@ -99,7 +100,7 @@ type AppointmentProps = Appointments.AppointmentProps & WithStyles<typeof styles
 type AppointmentContentProps = Appointments.AppointmentContentProps & WithStyles<typeof styles>;
 
 const isWeekEnd = (date: Date): boolean => date.getDay() === 0 || date.getDay() === 6;
-const defaultCurrentDate = new Date(2024, 3, 13, 9, 0);
+const defaultCurrentDate = new Date(2024, 3, 12, 9, 0);
 {
   /* !!!change */
 }
@@ -254,7 +255,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
             <div className="flex flex-row">
               <Scheduler data={props.scheduleCard}>
                 <ViewState defaultCurrentDate={defaultCurrentDate} />
-                <DayView startDayHour={8} endDayHour={24} intervalCount={1} />
+                <DayView startDayHour={1} endDayHour={24} intervalCount={1} />
                 <Appointments
                   appointmentComponent={Appointment}
                   appointmentContentComponent={AppointmentContent}
@@ -273,7 +274,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
         </div>
 
         {/* Event info card */}
-        <div className="overflow-y-auto flex flex-col justify-between lg:w-[36%] w-full h-full lg:my-0 my-2 border-2 border-black rounded-3xl bg-gradient-to-b from-blue-800 via-indigo-900 to-stone-800 p-8 text-complementary">
+        <div className="overflow-y-auto flex flex-col justify-between lg:w-[36%] w-full h-full lg:my-0 my-2 border-2 border-black rounded-3xl bg-gradient-to-b from-blue-800 via-indigo-800 to-purple-900 p-8 text-complementary">
           <section>
             {eventData.title === '' ? (
               <div className="text-2xl p-1">Click on an event for more info</div>
