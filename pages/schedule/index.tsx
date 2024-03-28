@@ -36,7 +36,7 @@ const styles = ({ palette }: Theme) =>
     appointment: {
       borderRadius: 0,
       borderBottom: 0,
-      backgroundColor: 'indigo',
+      backgroundColor: 'rgb(85 42 164)',
     },
 
     EventTypeAppointment: {
