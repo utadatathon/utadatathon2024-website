@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 var __spreadArray =
   (this && this.__spreadArray) ||
   function (to, from, pack) {
@@ -12,8 +12,8 @@ var __spreadArray =
     return to.concat(ar || Array.prototype.slice.call(from));
   };
 exports.__esModule = true;
-var hackportal_config_1 = require('../hackportal.config');
-var fs = require('fs');
+var hackportal_config_1 = require("../hackportal.config");
+var fs = require("fs");
 var _a = hackportal_config_1.hackPortalConfig.registrationFields,
   eventInfoQuestions = _a.eventInfoQuestions,
   generalQuestions = _a.generalQuestions,
@@ -45,34 +45,34 @@ function parseSection(section) {
           __spreadArray(
             __spreadArray([], acc, true),
             parseSingleValueQuestion(curr.textInputQuestions),
-            true,
+            true
           ),
           parseSingleValueQuestion(curr.datalistQuestions),
-          true,
+          true
         ),
         parseSingleValueQuestion(curr.textAreaQuestions),
-        true,
+        true
       );
     }, []),
     singleNumberFields: section.reduce(function (acc, curr) {
       return __spreadArray(
         __spreadArray([], acc, true),
         parseSingleValueQuestion(curr.numberInputQuestions),
-        true,
+        true
       );
     }, []),
     dropdownFields: section.reduce(function (acc, curr) {
       return __spreadArray(
         __spreadArray([], acc, true),
         parseMultipleChoiceQuestion(curr.dropdownQuestions),
-        true,
+        true
       );
     }, []),
     checkboxFields: section.reduce(function (acc, curr) {
       return __spreadArray(
         __spreadArray([], acc, true),
         parseMultipleChoiceQuestion(curr.checkboxQuestions),
-        true,
+        true
       );
     }, []),
   };
@@ -81,10 +81,10 @@ function generateSingleFieldRecordTypeDefinition(fieldArray, dataType) {
   return (
     fieldArray
       .map(function (field) {
-        return ''.concat(field, '?: Record<').concat(dataType, ', number>');
+        return "".concat(field, "?: Record<").concat(dataType, ", number>");
       })
-      .join('; ')
-      .trim() + ';'
+      .join("; ")
+      .trim() + ";"
   );
 }
 function generateMultipleChoiceFieldRecordTypeDefinition(fieldArray) {
@@ -93,27 +93,27 @@ function generateMultipleChoiceFieldRecordTypeDefinition(fieldArray) {
       .map(function (_a) {
         var name = _a.name,
           options = _a.options;
-        return ''.concat(name, '?: Record<').concat(
+        return "".concat(name, "?: Record<").concat(
           options
             .map(function (option) {
               return '"'.concat(option, '"');
             })
-            .join('|'),
-          ', number>',
+            .join("|"),
+          ", number>"
         );
       })
-      .join('; ')
-      .trim() + ';'
+      .join("; ")
+      .trim() + ";"
   );
 }
 function generateSingleFieldTypeDefinition(fieldArray, dataType) {
   return (
     fieldArray
       .map(function (field) {
-        return ''.concat(field, '?: ').concat(dataType);
+        return "".concat(field, "?: ").concat(dataType);
       })
-      .join('; ')
-      .trim() + ';'
+      .join("; ")
+      .trim() + ";"
   );
 }
 function generateCheckboxTypeDefinition(fieldArray) {
@@ -122,17 +122,17 @@ function generateCheckboxTypeDefinition(fieldArray) {
       .map(function (_a) {
         var name = _a.name,
           options = _a.options;
-        return ''.concat(name, '?: Array<').concat(
+        return "".concat(name, "?: Array<").concat(
           options
             .map(function (option) {
               return '"'.concat(option, '"');
             })
-            .join('|'),
-          '>',
+            .join("|"),
+          ">"
         );
       })
-      .join('; ')
-      .trim() + ';'
+      .join("; ")
+      .trim() + ";"
   );
 }
 function generateDropdownTypeDefinition(fieldArray) {
@@ -141,20 +141,20 @@ function generateDropdownTypeDefinition(fieldArray) {
       .map(function (_a) {
         var name = _a.name,
           options = _a.options;
-        return ''.concat(name, '?: ').concat(
+        return "".concat(name, "?: ").concat(
           options
             .map(function (option) {
               return '"'.concat(option, '"');
             })
-            .join('|'),
+            .join("|")
         );
       })
-      .join('; ')
-      .trim() + ';'
+      .join("; ")
+      .trim() + ";"
   );
 }
 function main() {
-  var unnecessaryFields = ['firstName', 'lastName', 'preferredEmail'];
+  var unnecessaryFields = ["firstName", "lastName", "preferredEmail"];
   var parsedSection = [
     parseSection(generalQuestions),
     parseSection(eventInfoQuestions),
@@ -167,26 +167,26 @@ function main() {
         singleNumberFields: __spreadArray(
           __spreadArray([], acc.singleNumberFields, true),
           curr.singleNumberFields,
-          true,
+          true
         ).filter(function (field) {
           return unnecessaryFields.indexOf(field) === -1;
         }),
         singleTextFields: __spreadArray(
           __spreadArray([], acc.singleTextFields, true),
           curr.singleTextFields,
-          true,
+          true
         ).filter(function (field) {
           return unnecessaryFields.indexOf(field) === -1;
         }),
         checkboxFields: __spreadArray(
           __spreadArray([], acc.checkboxFields, true),
           curr.checkboxFields,
-          true,
+          true
         ),
         dropdownFields: __spreadArray(
           __spreadArray([], acc.dropdownFields, true),
           curr.dropdownFields,
-          true,
+          true
         ),
       };
     },
@@ -195,37 +195,69 @@ function main() {
       singleTextFields: [],
       checkboxFields: [],
       dropdownFields: [],
-    },
+    }
   );
-  var registrationTypeDefinition = 'export interface Registration {\n    '
-    .concat(generateSingleFieldTypeDefinition(parsedSection.singleTextFields, 'string'), '\n    ')
-    .concat(generateSingleFieldTypeDefinition(parsedSection.singleNumberFields, 'number'), '\n    ')
-    .concat(generateCheckboxTypeDefinition(parsedSection.checkboxFields), '\n    ')
+  var registrationTypeDefinition = "export interface Registration {\n    "
+    .concat(
+      generateSingleFieldTypeDefinition(
+        parsedSection.singleTextFields,
+        "string"
+      ),
+      "\n    "
+    )
+    .concat(
+      generateSingleFieldTypeDefinition(
+        parsedSection.singleNumberFields,
+        "number"
+      ),
+      "\n    "
+    )
+    .concat(
+      generateCheckboxTypeDefinition(parsedSection.checkboxFields),
+      "\n    "
+    )
     .concat(
       generateDropdownTypeDefinition(parsedSection.dropdownFields),
-      '\n    id: string;\n    resume?: string;\n    scans: string[];\n    timestamp: number;\n    user: {\n        firstName: string;\n        lastName: string;\n        id: string;\n        permissions: string[];\n    }\n}',
+      "\n    id: string;\n    resume?: string;\n    scans: string[];\n    timestamp: number;\n    user: {\n        firstName: string;\n        lastName: string;\n        id: string;\n        permissions: string[];\n    }\n}"
     );
-  var statRecordTypeDefinition = 'export interface statRecordType {\n    '
+  var statRecordTypeDefinition = "export interface statRecordType {\n    "
     .concat(
-      generateSingleFieldRecordTypeDefinition(parsedSection.singleTextFields, 'string'),
-      '\n    ',
+      generateSingleFieldRecordTypeDefinition(
+        parsedSection.singleTextFields,
+        "string"
+      ),
+      "\n    "
     )
     .concat(
-      generateSingleFieldRecordTypeDefinition(parsedSection.singleNumberFields, 'number'),
-      '\n    ',
+      generateSingleFieldRecordTypeDefinition(
+        parsedSection.singleNumberFields,
+        "number"
+      ),
+      "\n    "
     )
-    .concat(generateMultipleChoiceFieldRecordTypeDefinition(parsedSection.checkboxFields), '\n    ')
     .concat(
-      generateMultipleChoiceFieldRecordTypeDefinition(parsedSection.dropdownFields),
-      '    \n}',
+      generateMultipleChoiceFieldRecordTypeDefinition(
+        parsedSection.checkboxFields
+      ),
+      "\n    "
+    )
+    .concat(
+      generateMultipleChoiceFieldRecordTypeDefinition(
+        parsedSection.dropdownFields
+      ),
+      "    \n}"
     );
-  if (!fs.existsSync('node_modules/@generated')) {
-    fs.mkdirSync('node_modules/@generated');
+  if (!fs.existsSync("node_modules/@generated")) {
+    fs.mkdirSync("node_modules/@generated");
   }
   fs.writeFileSync(
-    'node_modules/@generated/types.ts',
-    ''.concat(registrationTypeDefinition, '\n\n').concat(statRecordTypeDefinition),
+    "node_modules/@generated/types.ts",
+    ""
+      .concat(registrationTypeDefinition, "\n\n")
+      .concat(statRecordTypeDefinition)
   );
-  console.log('[INFO] Type Definition files generated in node_modules/@types/generated.ts\n');
+  console.log(
+    "[INFO] Type Definition files generated in node_modules/@types/generated.ts\n"
+  );
 }
 main();
