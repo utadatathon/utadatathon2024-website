@@ -327,7 +327,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
             </div>
           </section>
 
-          <div className="text-right">*All events are given in CST</div>
+          <div className="text-right">*All events are given in Central Time</div>
         </div>
       </div>
     </>
