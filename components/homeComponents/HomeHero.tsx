@@ -12,7 +12,7 @@ export default function HomeHero() {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const difference = +new Date('04/10/2024') - +new Date();
+      const difference = +new Date('04/13/2024') - +new Date();
       if (difference > 0) {
         return {
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
