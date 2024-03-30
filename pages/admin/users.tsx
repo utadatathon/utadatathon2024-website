@@ -257,11 +257,11 @@ export default function UserPage() {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
+                  <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-black-900">
                     Update Registration Status
                   </Dialog.Title>
                   <div className="mt-2">
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-black-500">
                       {nextRegistrationStatus === RegistrationState.OPEN
                         ? 'Are you sure you want to allow registration?'
                         : 'Are you sure you want to disable registration?'}
