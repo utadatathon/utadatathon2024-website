@@ -105,7 +105,7 @@ export default function Admin({ questions }: { questions: QADocument[] }) {
           <div className="flex flex-row justify-end my-4">
             <button
               type="button"
-              className="py-1 px-7 rounded-lg font-medium hover:bg-secondary bg-primaryDark text-secondary hover:text-primaryDark border-[1px] border-transparent hover:border-primaryDark transition duration-300 ease-in-out"
+              className="py-1 px-7 rounded-lg font-medium hover:brightness-90 bg-primary text-secondary hover:text-primaryDark"
               onClick={() => {
                 postAnnouncement();
               }}
