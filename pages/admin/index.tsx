@@ -71,8 +71,8 @@ export default function Admin({ questions }: { questions: QADocument[] }) {
   return (
     <div className="flex flex-col flex-grow">
       <Head>
-        <title>HackPortal - Admin</title>
-        <meta name="description" content="HackPortal's Admin Page" />
+        <title>UTA Datathon - Admin</title>
+        <meta name="description" content="UTA Datathon's Admin Page" />
       </Head>
       <section className="p-4">
         <AdminHeader />

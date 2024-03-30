@@ -234,8 +234,8 @@ export default function Admin() {
   return (
     <div className="relative flex flex-col flex-grow">
       <Head>
-        <title>HackPortal - Admin</title>
-        <meta name="description" content="HackPortal's Admin Page" />
+        <title>UTA Datathon - Admin</title>
+        <meta name="description" content="UTA Datathon's Admin Page" />
       </Head>
       <section className="p-4">
         <AdminHeader />
@@ -284,7 +284,8 @@ export default function Admin() {
       {showNewScanForm ? (
         <div className="px-6 py-4">
           <button
-            className="text-primaryDark font-bold md:text-lg text-base flex items-center"
+            className="text-white font-bold md:text-lg text-base flex items-center p-4"
+            
             onClick={() => {
               setShowNewScanForm(false);
             }}
@@ -292,10 +293,11 @@ export default function Admin() {
             <ChevronLeftIcon />
             Return to scanner
           </button>
-          <div className="text-2xl font-black text-center">Add New Scan</div>
+          <div className="text-2xl font-black text-center bg-gradient-to-br from-violet-800 via-violet-500 to-violet-50 bg-clip-text text-transparent custom-font mt-8">Add New Scan</div>
           <div className="w-3/5 my-5 mx-auto">
             <input
               className="p-3 rounded-lg w-full border-[1px] focus:border-primaryDark"
+              
               type="text"
               name="name"
               value={newScanForm.name}
@@ -320,12 +322,13 @@ export default function Admin() {
                   }));
                 }}
               />
-              <h1>Is this for check-in event?</h1>
+              <h1 className='text-white'>Is this for check-in event?</h1>
             </div>
           </div>
           <div className="flex justify-around">
             <button
-              className="mx-auto p-3 rounded-lg font-bold bg-green-200 hover:bg-green-300 border border-green-800 text-green-900"
+              // className=" bg-green-200 hover:bg-green-300 border border-green-800 text-green-900"
+              className="mx-auto p-3 rounded-lg font-bold text-base text-white bg-indigo-800 hover:brightness-90 px-4 py-2"
               onClick={async () => {
                 await createNewScan();
               }}
