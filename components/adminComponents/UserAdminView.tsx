@@ -253,7 +253,7 @@ export default function UserAdminView({
                 (isInEditMode ? (
                   <div className="flex items-center gap-x-2">
                     <button
-                      className="bg-secondary text-primaryDark py-2 px-6 rounded-full"
+                      className="bg-primary text-primaryDark py-2 px-6 rounded-full"
                       onClick={async () => {
                         try {
                           await updateRole();
@@ -267,7 +267,7 @@ export default function UserAdminView({
                       Update
                     </button>
                     <button
-                      className="bg-secondary text-primaryDark py-2 px-6 rounded-full"
+                      className="bg-primary text-primaryDark py-2 px-6 rounded-full"
                       onClick={() => {
                         setNewRole('');
                         setIsInEditMode(false);
