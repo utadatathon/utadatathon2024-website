@@ -99,8 +99,8 @@ export default function Pagination({
         return (
           <div
             key={i}
-            className={`flex items-center justify-center w-6 h-6 rounded-full mx-1 cursor-pointer text-sm
-          ${pageNumber === currentPage ? 'bg-primaryDark text-white' : 'text-complementary'}
+            className={`flex items-center justify-center w-6 h-6 rounded-full mx-1 cursor-pointer text-sm p-2
+          ${pageNumber === currentPage ? 'bg-primary text-white' : 'text-complementary'}
           `}
             onClick={() => onPageChange(pageNumber)}
           >

@@ -36,7 +36,7 @@ export default function UserAdminView({
     ['Major', currentUser.major],
     ['University', currentUser.university],
     ['Current Level of Study', currentUser.studyLevel],
-    ['Number of Hackathons Attended', currentUser.hackathonExperience],
+    ['Number of Datathons Attended', currentUser.hackathonExperience],
     ['Software Experience', currentUser.softwareExperience],
     [
       'Resume',
@@ -44,7 +44,7 @@ export default function UserAdminView({
         'No resume found'
       ) : (
         <Link passHref href={currentUser.resume} className="border-2 p-3 hover:bg-gray-200">
-          <a target="_blank" rel="noopener noreferrer">
+          <a target="_blank" rel="noopener noreferrer" className='mb-4'>
             Click here to download resume
           </a>
         </Link>
@@ -119,7 +119,7 @@ export default function UserAdminView({
   const startIndex = (currentPage - 1) * pageSize;
   // 208 px
   return (
-    <div className="lg:px-14 flex flex-row justify-between h-full">
+    <div className="lg:px-14 flex flex-row justify-between h-full mt-8">
       {/* User List */}
       <div className="hidden md:block md:w-72">
         {/* Page */}
@@ -163,9 +163,9 @@ export default function UserAdminView({
       </div>
 
       {/* User */}
-      <div className="rounded-lg border-2 border-gray h-full overflow-y-scroll w-full md:w-[calc(100%-300px)]">
+      <div className="rounded-lg 1 bg-white/90 border-gray h-full overflow-y-scroll w-full md:w-[calc(100%-300px)]">
         {/* Header */}
-        <div className="sticky top-0 bg-white shadow-md flex flex-row justify-between items-center py-1 text-complementary">
+        <div className="sticky top-0 bg-white shadow-md flex flex-row justify-between items-center py-1 text-black">
           <div className="flex items-center gap-x-2 p-3">
             <ChevronLeftIcon
               className="h-6 w-6 cursor-pointer"
@@ -182,7 +182,7 @@ export default function UserAdminView({
         </div>
 
         {/* User Info */}
-        <div className="p-10 text-complementary h-full">
+        <div className="p-10 text-black h-full">
           <h1 className="font-bold text-5xl">
             {currentUser.user.firstName} {currentUser.user.lastName}
           </h1>
@@ -204,13 +204,13 @@ export default function UserAdminView({
 
                 <div className="flex flex-row justify-between gap-x-3 items-center mt-4 lg:mt-0">
                   <button
-                    className="flex flex-row bg-secondary text-primaryDark text-lg font-bold py-2 px-8 rounded-md"
+                    className="flex flex-row bg-red-700 text-primaryDark text-lg font-bold py-2 px-8 rounded-md"
                     onClick={() => onAcceptReject('Rejected')}
                   >
                     <XIcon className="w-6 h-6 mr-1 mt-0.5" /> Reject
                   </button>
                   <button
-                    className="flex flex-row bg-primaryDark text-secondary text-lg font-bold py-2 px-8 rounded-md"
+                    className="flex flex-row bg-green-700 text-secondary text-lg font-bold py-2 px-8 rounded-md"
                     onClick={() => onAcceptReject('Accepted')}
                   >
                     <CheckIcon className="w-6 h-6 mr-1 mt-0.5" /> Accept
@@ -279,7 +279,7 @@ export default function UserAdminView({
                 ) : (
                   <button
                     onClick={() => setIsInEditMode((prev) => !prev)}
-                    className="bg-secondary text-primaryDark py-2 px-6 rounded-full"
+                    className="bg-primary  text-primaryDark py-2 px-6 rounded-full"
                   >
                     Edit
                   </button>

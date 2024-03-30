@@ -107,7 +107,7 @@ export default function AllUsersAdminView({
 
       {/* User Table List */}
       <div
-        className="rounded-lg border-2 border-gray mt-5 mb-10 overflow-y-scroll"
+        className="rounded-lg border-1 border-gray mt-5 mb-10 overflow-y-scroll bg-white/90"
         style={{ height: 'calc(100% - 100px)' }}
       >
         {/* Header */}
