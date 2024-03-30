@@ -291,7 +291,7 @@ export default function Admin() {
             }}
           >
             <ChevronLeftIcon />
-            Return to scanner
+            Return to Scanner
           </button>
           <div className="text-2xl font-black text-center bg-gradient-to-br from-violet-800 via-violet-500 to-violet-50 bg-clip-text text-transparent custom-font mt-8">Add New Scan</div>
           <div className="w-3/5 my-5 mx-auto">
