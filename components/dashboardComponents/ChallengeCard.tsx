@@ -11,7 +11,7 @@ function ChallengeCard(props) {
     description = props.description.replaceAll('\\n', '\n');
   }
   return (
-    <div className="inline-block w-full mb-[1em] sm:p-6 p-2 border-2 rounded-lg">
+    <div className="inline-block w-full mb-[1em] sm:p-6 p-2 border-2 rounded-lg text-white">
       <div className="md:text-xl text-lg font-bold mb-4">{props.title}</div>
       <div className="">
         <div className="whitespace-pre-line md:text-sm text-xs">{description}</div>

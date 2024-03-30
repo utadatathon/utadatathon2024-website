@@ -129,7 +129,7 @@ export default function ChallengePage({ challenges_ }: ChallengePageProps) {
             <Link href="/admin" passHref>
               <div className="cursor-pointer items-center inline-flex text-primaryDark font-bold md:text-lg text-base">
                 <ChevronLeftIcon />
-                return to event dashboard
+                Return to Event Dashboard
               </div>
             </Link>
           </div>
