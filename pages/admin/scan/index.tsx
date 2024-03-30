@@ -11,12 +11,12 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { Dialog } from '@headlessui/react';
 
 const successStrings = {
-  claimed: 'Scan claimed...',
-  invalidUser: 'Invalid user...',
-  alreadyClaimed: 'User has already claimed...',
-  unexpectedError: 'Unexpected error...',
+  claimed: 'Scan claimed.',
+  invalidUser: 'Invalid user.',
+  alreadyClaimed: 'User has already claimed.',
+  unexpectedError: 'Unexpected error.',
   notCheckedIn: "User hasn't checked in!",
-  invalidFormat: 'Invalid hacker tag format...',
+  invalidFormat: 'Invalid hacker tag format.',
 };
 
 function getSuccessColor(success: string) {
@@ -99,7 +99,7 @@ export default function Admin() {
       .catch((err) => {
         console.log(err);
         setScanData(data);
-        setSuccess('Unexpected error...');
+        setSuccess('Unexpected error.');
       });
   };
 
@@ -214,7 +214,7 @@ export default function Admin() {
     })
       .then(async (result) => {
         if (result.status !== 200) {
-          return console.error('Fetch failed for scan-types...');
+          return console.error('Fetch failed for scan-types.');
         }
         const data = await result.json();
         setScanTypes(data);
@@ -271,7 +271,7 @@ export default function Admin() {
                   Delete
                 </button>
                 <button
-                  className="rounded-lg p-3 bg-gray-200 hover:bg-gray-300 border border-gray-500"
+                  className="rounded-lg p-3 text-white bg-indigo-800 hover:brightness-90 px-4 py-2"
                   onClick={() => setShowDeleteScanDialog(false)}
                 >
                   Cancel
@@ -437,7 +437,7 @@ export default function Admin() {
                                 }));
                               }}
                             />
-                            <h1>Is this for check-in event?</h1>
+                            <h1 className='text-white'>Is this for check-in event?</h1>
                           </div>
                         </div>
                         <div className="flex justify-around">
@@ -451,7 +451,7 @@ export default function Admin() {
                               Update Scan Info
                             </button>
                             <button
-                              className="font-bold p-3 rounded-lg text-red-800 bg-red-100 hover:bg-red-200 border border-red-400"
+                              className="font-bold p-3 rounded-lg text-white bg-indigo-800 hover:brightness-90 px-4 py-2"
                               onClick={() => {
                                 setEditScan(false);
                               }}
@@ -510,7 +510,7 @@ export default function Admin() {
                         </>
                       )}
                       <button
-                        className="font-bold text-red-800 bg-red-100 hover:bg-red-200 border border-red-400 rounded-lg md:p-3 p-1 px-2"
+                        className="font-bold text-white bg-indigo-800 hover:brightness-90 px-4 py-2 rounded-lg md:p-3 p-1 px-2"
                         onClick={() => {
                           setCurrentScan(undefined);
                           setCurrentScanIdx(-1);
@@ -531,7 +531,7 @@ export default function Admin() {
               user.permissions.includes('super_admin') && (
                 <div className="mx-auto my-5">
                   <button
-                    className="py-3 px-4 font-bold rounded-lg hover:bg-secondary bg-primaryDark text-secondary hover:text-primaryDark border-[1px] border-transparent hover:border-primaryDark transition duration-300 ease-in-out"
+                    className="py-3 px-4 font-bold rounded-lg text-white bg-indigo-800 hover:brightness-90 px-4 py-2"
                     onClick={() => {
                       if (!user.permissions.includes('super_admin')) {
                         alert('You do not have the required permission to use this functionality');
