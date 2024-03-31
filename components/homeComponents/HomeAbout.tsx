@@ -6,10 +6,18 @@ export default function HomeAbout() {
 
         <div className="text-justify md:text-base text-sm p-4 bg-gradient-to-r from-slate-300 to-slate-200 bg-clip-text text-transparent">
           The UTA Datathon is one of the top annually run 24-hour data-based competitive events organized by the University of Texas at Arlington Libraries. With an engagement of more than 200 participants, the students will utilize their analytical skills along with data to address the given challenges. The event happening on April 13th -14th in the Nedderman Hall is open to all majors. The event will have participants from diverse majors, particularly those in Computer Science, Data Science, Information Systems, Math, and Statistics from all over the DFW area. Our goal is to foster interdisciplinary collaboration among students across various majors though the lens of data. 
-          Check us out on Github{' '}
+          Check out our {' '}
+          <a 
+            href="https://www.youtube.com/watch?v=KmJYv2EQ2_8"
+            className="underline text-white/50"
+            target=" "
+          >
+            Teaser Video 
+          </a> 
+          {' '} and our {' '}
           <a
             href="https://github.com/utadatathon"
-            className="underline"
+            className="underline text-white/50"
             target=" "
           >
             UTA Datathon Github
