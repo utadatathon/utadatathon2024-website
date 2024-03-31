@@ -38,7 +38,7 @@ export default function MemberCards(props) {
           src={props.fileName !== undefined && imageLink !== undefined ? imageLink : defaultPFP}
           height={120}
           width={120}
-          alt="Your profile"
+          alt="Team Member Profile Picture"
           layout="fixed"
         />
       </div>

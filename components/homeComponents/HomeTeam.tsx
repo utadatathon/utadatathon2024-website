@@ -19,7 +19,10 @@ export default function HomeTeam(props: { members: TeamMember[] }) {
         muted 
         playsInline // Add playsInline attribute
         controls={false} // Hide playback controls
-        className="absolute top-0 left-0 w-full h-full object-cover z-0">
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        preload='none'
+        title='Background Video 2'
+        >
           <source src="/videos/bg2.mp4" type="video/mp4" />
           {/* Add additional source elements for other video formats if needed */}
         </video>

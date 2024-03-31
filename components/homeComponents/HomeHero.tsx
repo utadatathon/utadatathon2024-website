@@ -49,6 +49,7 @@ export default function HomeHero() {
         controls={false}
         className="absolute inset-0 w-full h-full object-cover opacity-50"
         preload="none"
+        title="UTA Datathon 2024 Background Video"
       >
         <source src="/videos/bg.mp4" type="video/mp4" />
         {/* Add additional source elements for other video formats if needed */}
