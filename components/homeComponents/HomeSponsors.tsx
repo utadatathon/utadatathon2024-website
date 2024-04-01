@@ -28,7 +28,7 @@ export default function HomeSponsors(props: { sponsorCard: Sponsor[] }) {
           
           {/* Sponsor Card */}
           <section className="flex flex-wrap justify-center p-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 md:gap-y-4 lg:gap-y-4 gap-y-0">
               {sponsor.map(({ link, reference }, idx) => (
                 <SponsorCard key={idx} link={link} reference={reference} />
               ))}
