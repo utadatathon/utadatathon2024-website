@@ -39,7 +39,7 @@ const MapComponent: React.FC = () => {
           loading="lazy">
         </iframe>
       </div>
-      <div className="relative flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-0 space-y-14 lg:space-x-8 md:space-x-4 z-9 w-full mt-8 lg:mt-12">
+      <div className="relative flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-0 space-y-6 lg:space-x-8 md:space-x-4 z-9 w-full mt-8 lg:mt-12">
         <button
           onClick={() => window.open(googleMapsUrl, "_blank")}
           className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300 custom-font"
