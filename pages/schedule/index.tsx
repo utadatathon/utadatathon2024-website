@@ -36,37 +36,38 @@ const styles = ({ palette }: Theme) =>
     appointment: {
       borderRadius: 0,
       borderBottom: 0,
+      backgroundColor: 'rgb(85 42 164)',
     },
 
     EventTypeAppointment: {
-      border: `2px solid ${red[500]}`,
+      // border: `2px solid ${red[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      boxShadow: ` 0 0 16px 1px ${red[400]} `,
+      // boxShadow: ` 0 0 16px 1px ${red[400]} `,
     },
     SponsorTypeAppointment: {
-      border: `2px solid ${orange[500]}`,
+      // border: `2px solid ${orange[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      boxShadow: ` 0 0 16px 4px ${orange[500]} `,
+      // boxShadow: ` 0 0 16px 4px ${orange[500]} `,
     },
     TechTalkTypeAppointment: {
-      border: `2px solid ${indigo[500]}`,
+      // border: `2px solid ${indigo[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      boxShadow: ` 0 0 16px 4px ${indigo[500]} `,
+      // boxShadow: ` 0 0 16px 4px ${indigo[500]} `,
     },
     WorkshopTypeAppointment: {
-      border: `2px solid ${purple[500]}`,
+      // border: `2px solid ${purple[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      boxShadow: ` 0 0 16px 4px ${purple[500]} `,
+      // boxShadow: ` 0 0 16px 4px ${purple[500]} `,
     },
     SocialTypeAppointment: {
-      border: `2px solid ${blue[500]}`,
+      // border: `2px solid ${blue[500]}`,
       backgroundColor: `${grey[900]}`,
       borderRadius: 8,
-      boxShadow: ` 0 0 16px 4px ${blue[500]} `,
+      // boxShadow: ` 0 0 16px 4px ${blue[500]} `,
     },
     weekEndCell: {
       backgroundColor: alpha(palette.action.disabledBackground, 0.04),
@@ -87,6 +88,7 @@ const styles = ({ palette }: Theme) =>
     },
     content: {
       opacity: 0.7,
+      paddingTop: '1px',
     },
     container: {
       width: '100%',
@@ -99,7 +101,7 @@ type AppointmentProps = Appointments.AppointmentProps & WithStyles<typeof styles
 type AppointmentContentProps = Appointments.AppointmentContentProps & WithStyles<typeof styles>;
 
 const isWeekEnd = (date: Date): boolean => date.getDay() === 0 || date.getDay() === 6;
-const defaultCurrentDate = new Date(2024, 3, 13, 9, 0);
+const defaultCurrentDate = new Date(2024, 3, 12, 9, 0);
 {
   /* !!!change */
 }
@@ -114,7 +116,7 @@ const AppointmentContent = withStyles(styles, { name: 'AppointmentContent' })(
 
     return (
       <Appointments.AppointmentContent {...restProps} data={data}>
-        <div className={classes.container}>
+        <div className={(classes.container)}>
           <div className={classes.text}>{data.title}</div>
           <div className={classNames(classes.text, classes.content)}>{`Type: ${Event}`}</div>
           <div className={classNames(classes.text, classes.content)}>
@@ -145,14 +147,17 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
     ({ onClick, classes, data, ...restProps }: AppointmentProps) => (
       <Appointments.Appointment
         {...restProps}
-        className={classNames({
-          [classes.EventTypeAppointment]: data.Event === 1,
-          [classes.SponsorTypeAppointment]: data.Event === 2,
-          [classes.TechTalkTypeAppointment]: data.Event === 3,
-          [classes.WorkshopTypeAppointment]: data.Event === 4,
-          [classes.SocialTypeAppointment]: data.Event === 5,
-          [classes.appointment]: true,
-        })}
+        style={{ backgroundColor: 'rgb(86 40 159)' }}
+        className={classNames(
+          {
+            [classes.EventTypeAppointment]: data.Event === 1,
+            [classes.SponsorTypeAppointment]: data.Event === 2,
+            [classes.TechTalkTypeAppointment]: data.Event === 3,
+            [classes.WorkshopTypeAppointment]: data.Event === 4,
+            [classes.SocialTypeAppointment]: data.Event === 5,
+            [classes.appointment]: true,
+          }
+        )}
         data={data}
         onClick={() => changeEventData(data)}
       />
@@ -231,7 +236,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
   const resources = [
     {
       fieldName: 'track',
-      title: 'track',
+      title: 'Events',
       instances: Array.from(
         new Set(
           Array.from(uniqueTracks).map((track) => ({
@@ -246,7 +251,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
 
   return (
     <>
-      <div className="text-3xl font-black p-10 text-complementary bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent text-center">Schedule Coming Soon!</div>
+      <div className="text-3xl font-black p-10 text-complementary bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent text-center">Event Schedule</div>
       <div className="flex flex-wrap lg:justify-between px-6 h-[75vh]">
         {/* Calendar */}
         <div className="overflow-y-auto overflow-x-hidden lg:w-[62%] w-full h-full border-2 border-black rounded-3xl">
@@ -254,7 +259,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
             <div className="flex flex-row">
               <Scheduler data={props.scheduleCard}>
                 <ViewState defaultCurrentDate={defaultCurrentDate} />
-                <DayView startDayHour={8} endDayHour={24} intervalCount={1} />
+                <DayView startDayHour={1} endDayHour={24} intervalCount={1} />
                 <Appointments
                   appointmentComponent={Appointment}
                   appointmentContentComponent={AppointmentContent}
@@ -273,7 +278,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
         </div>
 
         {/* Event info card */}
-        <div className="overflow-y-auto flex flex-col justify-between lg:w-[36%] w-full h-full lg:my-0 my-2 border-2 border-black rounded-3xl bg-gradient-to-b from-blue-800 via-indigo-900 to-stone-800 p-8 text-complementary">
+        <div className="overflow-y-auto flex flex-col justify-between lg:w-[36%] w-full h-full lg:my-0 my-2 border-2 border-black rounded-3xl bg-gradient-to-b from-blue-800 via-indigo-800 to-purple-900 p-8 text-complementary">
           <section>
             {eventData.title === '' ? (
               <div className="text-2xl p-1">Click on an event for more info</div>
@@ -308,11 +313,11 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
                   <p>{eventData.time}</p>
                 </div>
                 <div className="">
-                  <p className="flex items-center font-semibold">
+                  {/* <p className="flex items-center font-semibold">
                     {<Backpack style={{ fontSize: 'medium', margin: '2px' }} />}
                     Page
                   </p>
-                  <p>{eventData.page}</p>
+                  <p>{eventData.page}</p> */}
                 </div>
               </div>
 
@@ -326,7 +331,7 @@ export default function Calendar(props: { scheduleCard: ScheduleEvent[] }) {
             </div>
           </section>
 
-          <div className="text-right">*All events are given in CST</div>
+          <div className="text-right">*All events are given in Central Time</div>
         </div>
       </div>
     </>

@@ -489,7 +489,7 @@ export const hackPortalConfig: HackPortalConfig = {
             id: 'mlhemails',
             name: 'mlhemails',
             required: false,
-            initialValue: ['NO'],
+            initialValue: [],
             options: [
               {
                 title: 'I authorize MLH to send me occasional emails about relevant events, career opportunities, and community announcements.',
@@ -530,16 +530,16 @@ export const fieldNames = {
   ethnicity: 'Ethnicity',
   race: 'Race',
   size: 'Shirt Size',
-  softwareExperience: 'Software Experience',
+  softwareExperience: 'Experience with Datasets',
   studyLevel: 'Study Level',
   university: 'University',
   gender: 'Gender',
-  hackathonExperience: 'Number of Hackathon attended',
-  heardFrom: 'Heard of Hackathon from',
+  hackathonExperience: 'Number of Datathons attended',
+  heardFrom: 'Heard of Datathon from',
   scans: 'Swags', //not part of registration questions, used for scanner
   companies: 'Companies',
   dietary: 'Dietary',
-  timestamp: 'Registration Time',
+  timestamp: 'Registration Dates',
 };
 
 //name fields that are checkbox questions belong here

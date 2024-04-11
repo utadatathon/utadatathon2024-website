@@ -88,7 +88,7 @@ export default function AppHeader() {
                 .filter(({ text }) => text !== 'Home')
                 .map((item) => (
                   <Link key={item.text} href={item.path}>
-                    <a className="p-9 py-6 hover:bg-primaryDark hover:text-white text-complementary">
+                    <a className="p-9 py-6 hover:bg-primaryDark/80 hover:text-black text-complementary">
                       <p className="text-xl font-medium">{item.text}</p>
                     </a>
                   </Link>
@@ -98,7 +98,7 @@ export default function AppHeader() {
           <Link href="/">
             <a className="flex gap-2 ml-[6px] font-display self-center items-center md:ml-0">
               {/* !change src */}
-              <Image src={'/logo.png'} width="65px" height="55px" />
+              <Image src={'/logo.png'} width="65px" height="55px" alt='User Image'/>
               <span className="text-lg font-black md:z-0 md:text-3xl text-primaryDark">
                 
               </span>

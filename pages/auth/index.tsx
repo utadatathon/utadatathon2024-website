@@ -1,13 +1,13 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import { useAuthContext } from '../../lib/user/AuthContext';
-import { useState } from 'react';
-import firebase from 'firebase/app';
-import Link from 'next/link';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import GoogleIcon from '../../public/icons/googleicon.png';
-import Image from 'next/image';
+import React from "react";
+import { useRouter } from "next/router";
+import { useAuthContext } from "../../lib/user/AuthContext";
+import { useState } from "react";
+import firebase from "firebase/app";
+import Link from "next/link";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import GoogleIcon from "../../public/icons/googleicon.png";
+import Image from "next/image";
 /**
  * A page that allows the user to sign in.
  *
@@ -15,9 +15,9 @@ import Image from 'next/image';
  */
 export default function AuthPage() {
   const { isSignedIn, signInWithGoogle, updateUser } = useAuthContext();
-  const [currentEmail, setCurrentEmail] = useState('');
-  const [currentPassword, setCurrentPassword] = useState('');
-  const [errorMsg, setErrorMsg] = useState('');
+  const [currentEmail, setCurrentEmail] = useState("");
+  const [currentPassword, setCurrentPassword] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
   const [passwordResetDialog, setPasswordResetDialog] = useState(false);
   const [sendVerification, setSendVerification] = useState(false);
   const [signInOption, setSignInOption] = useState(true);
@@ -33,17 +33,22 @@ export default function AuthPage() {
         // Signed in
         if (!user.emailVerified) {
           setSendVerification(true);
-          throw new Error('Email is not verified. Verify your email before logging in.');
+          throw new Error(
+            "Email is not verified. Verify your email before logging in."
+          );
         }
         await updateUser(user);
       })
       .catch((error) => {
-        let errorMessage = 'An error occurred while signing in. Please try again.';
+        let errorMessage =
+          "An error occurred while signing in. Please try again.";
         const errorCode = error.code;
-        if (errorCode === 'auth/user-not-found') {
-          errorMessage = 'User not found. Please check your email and try again.';
-        } else if (errorCode === 'auth/wrong-password') {
-          errorMessage = 'Invalid password. Please check your password and try again.';
+        if (errorCode === "auth/user-not-found") {
+          errorMessage =
+            "User not found. Please check your email and try again.";
+        } else if (errorCode === "auth/wrong-password") {
+          errorMessage =
+            "Invalid password. Please check your password and try again.";
         }
         // const errorMessage = error.message;
         setErrorMsg(errorMessage);
@@ -62,9 +67,9 @@ export default function AuthPage() {
           .auth()
           .currentUser.sendEmailVerification()
           .then(() => {
-            router.push('/auth');
+            router.push("/auth");
             alert(
-              'Account created! Check your email/spam folder to verify your account and Log in.',
+              "Account created! Check your email/spam folder to verify your account and Log in."
             );
           });
       })
@@ -80,7 +85,7 @@ export default function AuthPage() {
       .auth()
       .sendPasswordResetEmail(currentEmail)
       .then(() => {
-        alert('Password reset email sent');
+        alert("Password reset email sent");
       })
       .catch((error) => {
         var errorCode = error.code;
@@ -96,12 +101,14 @@ export default function AuthPage() {
         .auth()
         .currentUser.sendEmailVerification()
         .then(() => {
-          router.push('/auth');
-          alert('Verification email sent! Check your email to verify your account and log in');
+          router.push("/auth");
+          alert(
+            "Verification email sent! Check your email to verify your account and log in"
+          );
         });
     } catch (error) {
       alert(
-        'There has been a problem sending a verfication email.\nWait a few minutes before sending another request.',
+        "There has been a problem sending a verfication email.\nWait a few minutes before sending another request."
       );
     }
   };
@@ -115,7 +122,7 @@ export default function AuthPage() {
   }
 
   if (isSignedIn) {
-    router.push('/profile');
+    router.push("/profile");
   }
 
   return (
@@ -138,21 +145,31 @@ export default function AuthPage() {
               {!passwordResetDialog ? (
                 <>
                   <h1 className="md:text-3xl text-2xl font-black text-center text-primaryDark mt-4 custom-font tracking-wider">
-                    {signInOption ? 'Sign in' : 'Create an account'}
+                    {signInOption ? "Sign in" : "Create an account"}
                   </h1>
                   <div className="text-center text-complementary/60 mt-4 mb-12">
-                    {signInOption ? ' New to UTA Datathon?' : 'Already have an account?'}{' '}
+                    {signInOption
+                      ? " New to UTA Datathon?"
+                      : "Already have an account?"}{" "}
                     <span
                       onClick={() =>
-                        signInOption ? setSignInOption(false) : setSignInOption(true)
+                        signInOption
+                          ? setSignInOption(false)
+                          : setSignInOption(true)
                       }
                       className="text-primary cursor-pointer"
                     >
-                      {signInOption ? 'Create an account' : 'Sign in'}
+                      {signInOption ? "Create an account" : "Sign in"}
                     </span>
                   </div>
                   <React.Fragment>
-                    <form onSubmit={handleSubmit} className="mt-4">
+                    <form
+                      onSubmit={(e) => {
+                        e.preventDefault(); // Prevent the default form submission
+                        handleSubmit(); // Call your submit function
+                      }}
+                      className="mt-4"
+                    >
                       <input
                         className="w-full rounded-md border border-complementary/20 p-2 mb-4"
                         value={currentEmail}
@@ -166,7 +183,7 @@ export default function AuthPage() {
                         className="w-full rounded-md border border-complementary/20 p-2 mb-2"
                         value={currentPassword}
                         onChange={(e) => setCurrentPassword(e.target.value)}
-                        type={showPassword ? 'text' : 'password'}
+                        type={showPassword ? "text" : "password"}
                         name="password"
                         autoComplete="current-password"
                         placeholder="Password*"
@@ -176,7 +193,7 @@ export default function AuthPage() {
                           className="hover:underline cursor-pointer text-left text-primary"
                           onClick={() => {
                             setPasswordResetDialog(true);
-                            setErrorMsg('');
+                            setErrorMsg("");
                             setSendVerification(false);
                           }}
                         >
@@ -188,9 +205,12 @@ export default function AuthPage() {
                             type="checkbox"
                             onClick={() => setShowPassword(!showPassword)}
                           />
-                          {showPassword ? 'Hide password' : 'Show password'}
+                          {showPassword ? "Hide password" : "Show password"}
                         </div>
-                        <input className="hidden" type="submit" value="Submit" />
+                        <button type="submit" className="hidden">
+                          Submit
+                        </button>{" "}
+                        {/* Hidden submit button to trigger onSubmit */}
                       </div>
                       <div className="flex justify-center mt-6 mb-4">
                         <button
@@ -200,10 +220,11 @@ export default function AuthPage() {
                             handleSubmit();
                           }}
                         >
-                          {signInOption ? 'Sign in' : 'Create an account'}
+                          {signInOption ? "Sign in" : "Create an account"}
                         </button>
                       </div>
                     </form>
+
                     {/* Error and verification messages */}
                     <div className="text-center text-white">{errorMsg}</div>
                     {/* !change if needed */}
@@ -219,7 +240,12 @@ export default function AuthPage() {
                       className="mt-6 px-4 py-2 w-full rounded-full text-complementary bg-indigo-800 my-4 text-base font-bold text-center flex items-center justify-center"
                       onClick={() => signInWithGoogle()}
                     >
-                      <Image src={GoogleIcon} alt="GoogleIcon" width={25} height={25} />
+                      <Image
+                        src={GoogleIcon}
+                        alt="GoogleIcon"
+                        width={25}
+                        height={25}
+                      />
                       <p className="mx-2">Sign in with Google</p>
                     </button>
                   </React.Fragment>
@@ -231,7 +257,7 @@ export default function AuthPage() {
                       className="cursor-pointer text-primaryDark"
                       onClick={() => {
                         setPasswordResetDialog(false);
-                        setErrorMsg('');
+                        setErrorMsg("");
                       }}
                     />
                   </div>
@@ -239,7 +265,8 @@ export default function AuthPage() {
                     Reset Password
                   </h1>
                   <div className="text-center text-complementary/60 mt-4 mb-12">
-                    Enter your email address and we&apos;ll send you a link to reset your password.
+                    Enter your email address and we&apos;ll send you a link to
+                    reset your password.
                   </div>
 
                   <input
@@ -257,7 +284,7 @@ export default function AuthPage() {
                       className="rounded-full text-base w-full text-white bg-indigo-800 hover:brightness-90 px-4 py-2"
                       onClick={() => {
                         sendResetEmail();
-                        setErrorMsg('');
+                        setErrorMsg("");
                       }}
                     >
                       Send Reset Link

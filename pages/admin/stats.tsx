@@ -48,11 +48,11 @@ export default function AdminStatsPage() {
   return (
     <div className="flex flex-col flex-grow">
       <Head>
-        <title>HackPortal - Admin</title>
-        <meta name="description" content="HackPortal's Admin Page" />
+        <title>UTA Datathon - Admin</title>
+        <meta name="description" content="UTA Datathon Admin Page" />
       </Head>
       <AdminHeader />
-      <div className="w-full xl:w-3/5 mx-auto p-6 flex flex-col gap-y-6">
+      <div className="w-full xl:w-3/5 mx-auto p-6 flex flex-col gap-y-6 bg-white">
         <div className="flex-col gap-y-3 w-full md:flex-row flex justify-around gap-x-2">
           <AdminStatsCard icon={<CheckIcon />} title="Check-Ins" value={statsData.checkedInCount} />
           <AdminStatsCard

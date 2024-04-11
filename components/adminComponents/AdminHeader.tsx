@@ -31,8 +31,8 @@ export default function AdminHeader() {
 
   return (
     <section className="">
-      <header className="hidden md:flex flex-row justify-center p-2 items-center">
-        <div className=" md:text-base lg:text-xl font-header md:text-left text-complementary font-semibold border-b-2 py-2">
+      <header className="hidden md:flex flex-row justify-center p-2 items-center p-4">
+        <div className=" md:text-base lg:text-xl font-header md:text-left text-complementary font-semibold py-2">
           <NavLink
             href="/admin"
             exact={true}
@@ -69,34 +69,34 @@ export default function AdminHeader() {
           )}
         </div>
       </header>
-      <div className="mt-4 md:hidden ">
+      <div className="mt-4 md:hidden p-4 ">
         <button
           ref={accordian}
           onClick={() => triggerAccordion()}
-          className="accordion text-left p-2 text-sm bg-primaryDark text-secondary flex justify-between relative"
+          className="accordion text-left p-2 text-sm bg-customBackground text-secondary flex justify-between relative"
         >
           <p>Admin Menu</p>
           <ChevronRightIcon className={`${isOpen ? 'transform rotate-90' : ''} w-5 h-5`} />
         </button>
-        <div className="panel w-full bg-secondaryDark text-primaryDark text-sm">
+        <div className="panel w-full bg-customBackground text-primaryDark text-sm">
           <ul className="">
-            <li className="p-2 hover:bg-secondary cursor-pointer">
+            <li className="p-2 hover:bg-secondary/50 hover:text-black cursor-pointer">
               <Link href="/admin" passHref>
                 <div>Event Dashboard</div>
               </Link>
             </li>
-            <li className="p-2 hover:bg-secondary cursor-pointer">
+            <li className="p-2 hover:bg-secondary/50 hover:text-black cursor-pointer">
               <Link href="/admin/scan" passHref>
                 <div>Scanner</div>
               </Link>
             </li>
-            <li className="p-2 hover:bg-[#DCDEFF]">
+            <li className="p-2 hover:bg-secondary/50 hover:text-black cursor-pointer">
               <Link href="/admin/users" passHref>
                 <div>User Dashboard</div>
               </Link>
             </li>
             {isAuthorized(user) && (
-              <li className="p-2 hover:bg-secondary cursor-pointer">
+              <li className="p-2 hover:bg-secondary/50 hover:text-black cursor-pointer">
                 <Link href="/admin/stats" passHref>
                   <div>Stats at a Glance</div>
                 </Link>

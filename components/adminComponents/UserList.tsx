@@ -37,7 +37,7 @@ export default function UserList({
           Year
         */}
         <div
-          className={`flex w-1/2 md:w-2/12 h-full py-3 pr-6 items-center text-complementary text-base`}
+          className={`flex w-1/2 md:w-2/12 h-full py-3 pr-6 items-center text-black text-base`}
           onClick={(e) => {
             e.stopPropagation();
             // onUserSelect(user.id);
@@ -51,7 +51,7 @@ export default function UserList({
               }}
               checked={user.selected}
               type="checkbox"
-              className="w-4 h-4 mr-2 rounded-sm border-[1px] border-complementary bg-transparent text-primaryDark"
+              className="w-4 h-4 mr-2 rounded-sm border-[1px] border-black bg-transparent text-black"
             />
           </div>
           <div
@@ -74,13 +74,13 @@ export default function UserList({
             {user.status}
           </span>
         </div>
-        <div className="hidden md:block text-base text-complementary w-4/12 h-full py-3 pr-6 whitespace-nowrap overflow-hidden text-ellipsis max-w-[100%]">
+        <div className="hidden md:block text-base text-black w-4/12 h-full py-3 pr-6 whitespace-nowrap overflow-hidden text-ellipsis max-w-[100%]">
           {user.university}
         </div>
-        <div className="hidden md:block text-base text-complementary w-2/12 h-full py-3 pr-6 whitespace-nowrap overflow-hidden text-ellipsis max-w-[100%]">
+        <div className="hidden md:block text-base text-black w-2/12 h-full py-3 pr-6 whitespace-nowrap overflow-hidden text-ellipsis max-w-[100%]">
           {user.major}
         </div>
-        <div className="hidden md:block text-base text-complementary w-2/12 h-full py-3 pr-6 whitespace-nowrap overflow-hidden text-ellipsis max-w-[100%]">
+        <div className="hidden md:block text-base text-black w-2/12 h-full py-3 pr-6 whitespace-nowrap overflow-hidden text-ellipsis max-w-[100%]">
           {user.studyLevel}
         </div>
       </div>,

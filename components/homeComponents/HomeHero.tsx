@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export default function HomeHero() {
   const router = useRouter();
@@ -7,12 +7,12 @@ export default function HomeHero() {
     days: 0,
     hours: 0,
     minutes: 0,
-    seconds: 0
+    seconds: 0,
   });
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const difference = +new Date('04/10/2024') - +new Date();
+      const difference = +new Date("04/13/2024") - +new Date();
       if (difference > 0) {
         return {
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -25,7 +25,7 @@ export default function HomeHero() {
           days: 0,
           hours: 0,
           minutes: 0,
-          seconds: 0
+          seconds: 0,
         };
       }
     };
@@ -45,9 +45,11 @@ export default function HomeHero() {
         autoPlay
         loop
         muted
-        playsInline // Add playsInline attribute
-        controls={false} // Hide playback controls
+        playsInline
+        controls={false}
         className="absolute inset-0 w-full h-full object-cover opacity-50"
+        preload="none"
+        title="UTA Datathon 2024 Background Video"
       >
         <source src="/videos/bg.mp4" type="video/mp4" />
         {/* Add additional source elements for other video formats if needed */}
@@ -61,51 +63,63 @@ export default function HomeHero() {
             <h1 className="text-center md:text-8xl text-5xl font-bold text-primaryDark custom-font">
               UTA Datathon <span className="custom-font-2">2024</span>
             </h1>{" "}
-            {/* !change */}
-            {/* <p className="text-center my-4 font-semibold md:text-xl text-md text-primaryDark opacity-80">
-              {" "}
-              // {/* !change */}
-            {/* </p> */} 
-
-          {/* Countdown Timer */}
-          <div className="countdown-timer text-primaryDark" style={{ textAlign: 'center', margin: '1rem 0' }}>
-            <h2 className="custom-font">Countdown to the Datathon</h2>
-            <div className="time-left text-primaryDark" style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop:'1rem', flexWrap: 'wrap' }}>
-              {Object.keys(timeLeft).map((interval) => (
-                <div key={interval} className="countdown-box backdrop-blur-sm bg-customBackground/30 border-2 border-gray-300 rounded-xl min-w-28 custom-font-2" style={{ padding: '10px' }}>
-                  <span className="countdown-number text-xl">{timeLeft[interval]}</span>
-                 <p className="countdown-label custom-font">{interval.toUpperCase()}</p>
-                </div>
-              ))}
+            {/* Countdown Timer */}
+            <div
+              className="countdown-timer text-primaryDark"
+              style={{ textAlign: "center", margin: "1rem 0" }}
+            >
+              <h2 className="custom-font">Countdown to the Datathon</h2>
+              <div
+                className="time-left text-primaryDark"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: "15px",
+                  marginTop: "1rem",
+                  flexWrap: "wrap",
+                }}
+              >
+                {Object.keys(timeLeft).map((interval) => (
+                  <div
+                    key={interval}
+                    className="countdown-box backdrop-blur-sm bg-customBackground/30 border-2 border-gray-300 rounded-xl min-w-28 custom-font-2"
+                    style={{ padding: "10px" }}
+                  >
+                    <span className="countdown-number text-xl">
+                      {timeLeft[interval]}
+                    </span>
+                    <p className="countdown-label custom-font">
+                      {interval.toUpperCase()}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-
-
-
-
-
-
           </div>
 
           {/* Buttons */}
           <div className="relative flex flex-col items-center md:flex-row md:justify-around px-44 md:space-y-0 space-y-3 z-9 w-full">
             {/* Button 1 */}
             <button
-              onClick={() => router.push('/auth')}
+              onClick={() => router.push("/auth")}
               className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300 custom-font"
             >
               Apply
             </button>
             {/* Button 2 */}
             <button
-              onClick={() => {window.open('https://discord.gg/Ypfa6zXCJ9', '_blank');}}
+              onClick={() => {
+                window.open("https://discord.gg/Ypfa6zXCJ9", "_blank");
+              }}
               className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300 custom-font"
             >
               Discord
             </button>
             {/* Button 3 */}
             <button
-              onClick={() => {window.open('https://uta-datathon-2024.devpost.com/', '_blank');}}
+              onClick={() => {
+                window.open("https://uta-datathon-2024.devpost.com/", "_blank");
+              }}
               className="max-w-[14rem] w-[14rem] md:max-w-full backdrop-blur-sm bg-customBackground/30 py-4 rounded-xl h-10 flex items-center justify-center font-semibold text-xl text-primaryDark border-2 border-gray-300 custom-font"
             >
               Dev Post

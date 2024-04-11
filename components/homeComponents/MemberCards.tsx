@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import 'firebase/storage';
 import firebase from 'firebase';
 import Image from 'next/image';
-import defaultPFP from '../../public/assets/defaultPFP.jpg';
+import defaultPFP from '../../public/assets/defaultPFP.png';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PersonIcon from '@mui/icons-material/Person';
@@ -38,7 +38,7 @@ export default function MemberCards(props) {
           src={props.fileName !== undefined && imageLink !== undefined ? imageLink : defaultPFP}
           height={120}
           width={120}
-          alt="Your profile"
+          alt="Team Member Profile Picture"
           layout="fixed"
         />
       </div>

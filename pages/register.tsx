@@ -187,7 +187,7 @@ export default function Register({ allowedRegistrations }: RegisterPageProps) {
       <Head>
         <title>UTA Datathon Registration</title>
         <meta name="description" content="Register for UTA Datathon 2024" />
-        <link rel="icon" href="/logo-bg.png" />
+        <link rel="icon" href="/logo-bg.png" type="image/png" />
       </Head>
       <section className="pt-4 pl-4">
         <Link href="/" passHref>

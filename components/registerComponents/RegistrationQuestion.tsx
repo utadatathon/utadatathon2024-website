@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useLayoutEffect, Fragment } from 'react';
-import { Field, ErrorMessage } from 'formik';
+import React, { useEffect, useState, useLayoutEffect, Fragment } from "react";
+import { Field, ErrorMessage } from "formik";
 
 /**
  *Text input question Component
@@ -7,11 +7,11 @@ import { Field, ErrorMessage } from 'formik';
  *
  */
 function Question(props) {
-  if (props.type === 'text') {
+  if (props.type === "text") {
     return (
       <Fragment>
         <label htmlFor={props.question.id} className="mt-4 py-2">
-          {props.question.required ? '*' : ''}
+          {props.question.required ? "*" : ""}
           {props.question.question}
         </label>
         <Field
@@ -25,11 +25,11 @@ function Question(props) {
         />
       </Fragment>
     );
-  } else if (props.type === 'number') {
+  } else if (props.type === "number") {
     return (
       <Fragment key={props.question.id}>
         <label htmlFor={props.question.id} className="mt-4 py-2">
-          {props.question.required ? '*' : ''}
+          {props.question.required ? "*" : ""}
           {props.question.question}
         </label>
         <input
@@ -49,11 +49,11 @@ function Question(props) {
         />
       </Fragment>
     );
-  } else if (props.type === 'dropdown') {
+  } else if (props.type === "dropdown") {
     return (
       <Fragment>
         <label htmlFor={props.question.id} className="mt-4 py-2 ">
-          {props.question.required ? '*' : ''}
+          {props.question.required ? "*" : ""}
           {props.question.question}
         </label>
         <Field
@@ -75,18 +75,65 @@ function Question(props) {
         />
       </Fragment>
     );
-  } else if (props.type === 'checkbox') {
+  } else if (props.type === "checkbox") {
     return (
       <Fragment>
         <label htmlFor={props.question.name} className="mt-4 py-2">
-          {props.question.required ? '*' : ''}
+          {props.question.required ? "*" : ""}
           {props.question.question}
         </label>
-        <div role="group" aria-labelledby="checkbox-group" className="flex flex-col">
+        <div
+          role="group"
+          aria-labelledby="checkbox-group"
+          className="flex flex-col"
+        >
           {props.question.options.map((option) => (
             <label key={option.value}>
-              <Field type="checkbox" name={props.question.name} value={option.value} />
-              &nbsp;{option.title}
+              <Field
+                type="checkbox"
+                name={props.question.name}
+                value={option.value}
+              />
+              &nbsp;
+              {option.title
+                .split(
+                  /(MLH Privacy Policy|MLH Code of Conduct|MLH Contest Terms and Conditions)/
+                )
+                .map((part, index) => (
+                  <React.Fragment key={index}>
+                    {(part === "MLH Privacy Policy" && (
+                      <a
+                        href="https://mlh.io/privacy"
+                        style={{ textDecoration: "underline" }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {part}
+                      </a>
+                    )) ||
+                      (part === "MLH Code of Conduct" && (
+                        <a
+                          href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+                          style={{ textDecoration: "underline" }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {part}
+                        </a>
+                      )) ||
+                      (part === "MLH Contest Terms and Conditions" && (
+                        <a
+                          href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md"
+                          style={{ textDecoration: "underline" }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {part}
+                        </a>
+                      )) ||
+                      part}
+                  </React.Fragment>
+                ))}
             </label>
           ))}
         </div>
@@ -96,11 +143,11 @@ function Question(props) {
         />
       </Fragment>
     );
-  } else if (props.type === 'datalist') {
+  } else if (props.type === "datalist") {
     return (
       <Fragment>
         <label htmlFor={props.question.name} className="mt-4 py-2">
-          {props.question.required ? '*' : ''}
+          {props.question.required ? "*" : ""}
           {props.question.question}
         </label>
         <Field
@@ -125,11 +172,11 @@ function Question(props) {
         />
       </Fragment>
     );
-  } else if (props.type === 'textArea') {
+  } else if (props.type === "textArea") {
     return (
       <Fragment>
         <label htmlFor={props.question.name} className="mt-4 py-2">
-          {props.question.required ? '*' : ''}
+          {props.question.required ? "*" : ""}
           {props.question.question}
         </label>
         <Field
