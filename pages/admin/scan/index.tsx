@@ -360,7 +360,7 @@ export default function Admin() {
             {currentScan && (
               <div className="my-6">
                 <div className="flex flex-col gap-y-4">
-                  <div className="text-center text-xl font-black">
+                  <div className="text-center text-xl text-white">
                     {currentScan ? currentScan.name : ''}
                   </div>
                   {startScan ? (
