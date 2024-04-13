@@ -108,7 +108,7 @@ export default function HomeChallenges(props: { challenges: Challenge[] }) {
                     key={idx}
                     onClick={() => changeOrg(challenge, idx)}
                   >
-                    {challenge.organization}
+                    {challenge.title}
                     <button className=" text-primaryDark rounded-lg mt-1 text-xs">
                       Learn more
                     </button>
