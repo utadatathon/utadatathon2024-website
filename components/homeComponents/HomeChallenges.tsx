@@ -83,7 +83,8 @@ export default function HomeChallenges(props: { challenges: Challenge[] }) {
             breakpoints={{
               // when window width is >= 0px
               0: {
-                slidesPerView: 2,
+                slidesPerView: 1,
+                
               },
               // when window width is >= 768px
               768: {
