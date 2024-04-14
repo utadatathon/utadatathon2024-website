@@ -13,6 +13,7 @@ import HomeSponsors from '../components/homeComponents/HomeSponsors';
 import HomeFooter from '../components/homeComponents/HomeFooter';
 import HomeFaq from '../components/homeComponents/HomeFaq';
 import MapComponent from '../components/homeComponents/MapComponent';
+import HomeLeaderboard from '../components/homeComponents/HomeLeaderboard';
 
 /**
  * The home page.
@@ -52,6 +53,7 @@ export default function Home(props: {
 
       <HomeHero />
       <HomeAbout />
+      {/* <HomeLeaderboard /> */}
       <HomeSpeakers keynoteSpeakers={props.keynoteSpeakers} />
       <HomeChallenges challenges={props.challenges} /> 
       <MapComponent />
