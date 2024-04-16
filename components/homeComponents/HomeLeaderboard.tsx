@@ -111,14 +111,14 @@ export default function HomeLeaderboard() {
 
   return (
     <section className="md:p-12 p-8 text-complementary">
-        <h1 className="text-4xl font-bold my-4 text-center bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent custom-font tracking-wide w-full">
+        <h1 className="flex items-start justify-center font-bold md:p-12 p-12 md:text-4xl text-2xl my-2 text-complementary text-center bg-gradient-to-r from-violet-500 to-purple-400 bg-clip-text text-transparent custom-font">
           LEADERBOARD
         </h1>
-      <div className="flex flex-col flex-grow rounded-3xl p-4 mx-auto w-full">
+      <div className="flex flex-col flex-grow rounded-3xl md:p-4 mx-auto w-full">
 
-        <div className="flex w-full">
+        <div className="flex flex-col md:flex-row w-full">
           {/* Left side: Model Challenges */}
-          <div className="flex flex-col w-1/2">
+          <div className="flex flex-col md:w-1/2 w-full">
           <h3 className="text-md text-center custom-font p-8">Model Challenges</h3>
             <div className="flex justify-center gap-4 mb-4">
               
@@ -142,7 +142,7 @@ export default function HomeLeaderboard() {
           {/* <div className="w-px bg-indigo-500/30 self-stretch mx-4"></div> */}
 
           {/* Right side: timed Challenges */}
-          <div className="flex flex-col w-1/2 pl-4">
+          <div className="flex flex-col w-full md:w-1/2 md:pl-4 md:pl-0">
           <h3 className="text-md text-center custom-font p-8">Timed Challenges</h3>
             <div className="flex justify-center flex-wrap gap-4 mb-4">
               {/* timed Challenge Buttons */}
